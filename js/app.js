@@ -96,8 +96,7 @@ gsap.utils.toArray(".animCounter").forEach(box => {
           trigger: box,
           start: "top 70%",
           end: "bottom 80%",
-          toggleActions: "play none none reverse",
-          markers: true
+          toggleActions: "play none none reverse"
       }
   }); })
 
@@ -113,8 +112,7 @@ gsap.utils.toArray(".animCounter").forEach(box => {
             trigger: box,
             start: "top 70%",
             end: "bottom 80%",
-            toggleActions: "play none none reverse"/*,
-            markers: true*/
+            toggleActions: "play none none reverse"
         }
     }); })
 

@@ -199,46 +199,46 @@ footer .menu a{
   max-width: 50rem;
  }
 .seccion1 .tituloSeccion {
-  background-image: url("img/paisaje-1-1.jpg");
+  background-image: url("../img/paisaje-1-1.jpg");
 }
 .seccion1 .portadaSeccion {
-  background-image: url("img/paisaje-1-2.jpg");
+  background-image: url("../img/paisaje-1-2.jpg");
 }
 
 
 .seccion1 .VpanelIzquierda {
-  background-image: url("img/paisaje-1-1.jpg");
+  background-image: url("../img/paisaje-1-1.jpg");
   background-size: cover;
 }
 
 .seccion2 .portadaSeccion {
-  background-image: url("img/paisaje-2-2.jpg");
+  background-image: url("../img/paisaje-2-2.jpg");
 }
 .seccion2 .tituloSeccion {
-  background-image: url("img/paisaje-2-1.jpg");
+  background-image: url("../img/paisaje-2-1.jpg");
 }
 .seccion2 .VpanelIzquierda {
-  background-image: url("img/paisaje-2-1.jpg");
+  background-image: url("../img/paisaje-2-1.jpg");
   background-size: cover;
 }
 .seccion3 .portadaSeccion {
-  background-image: url("img/paisaje-3-2.jpg");
+  background-image: url("../img/paisaje-3-2.jpg");
 }
 .seccion3 .tituloSeccion {
-  background-image: url("/img/paisaje-3-1.jpg");
+  background-image: url("../img/paisaje-3-1.jpg");
 }
 .seccion3 .VpanelIzquierda {
-  background-image: url("img/paisaje-3-1.jpg");
+  background-image: url("../img/paisaje-3-1.jpg");
   background-size: cover;
 }
 .seccion4 .portadaSeccion {
-  background-image: url("img/paisaje-4-2.jpg");
+  background-image: url("../img/paisaje-4-2.jpg");
 }
 .seccion4 .tituloSeccion {
-  background-image: url("img/paisaje-4-1.jpg");
+  background-image: url("../img/paisaje-4-1.jpg");
 }
 .seccion4 .VpanelIzquierda {
-  background-image: url("img/paisaje-4-1.jpg");
+  background-image: url("../img/paisaje-4-1.jpg");
   background-size: cover;
 }
 .linksDescargaContainer {
