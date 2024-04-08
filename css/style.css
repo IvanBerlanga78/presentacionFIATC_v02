@@ -23,7 +23,8 @@
     --secondary-blue-color:rgba(59, 109, 172,0.5);
     --main-gray-color:#222;
     --secondary-gray-color:rgba(98, 97, 97, 0.5);
-    --main-red :rgb(255, 0, 0);
+    --main-red :#DA291C;
+    --secondary-red :#f9a8a5;
   }
 
 * {
@@ -73,7 +74,7 @@ h4{
 }
 p {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   font-size: 16px;
 }
 video {
@@ -120,13 +121,76 @@ footer {
   display: flex;
   align-items: center;
 }
+footer .archivoInformes {
+  position: relative;
+  min-width: 260px;
+  height: 50px;
+}
+footer .archivoInformes .btnPrincipal img {
+  width: 32px;
+}
+footer .archivoInformes .btnPrincipal:hover{
+  background: #fff;
+  color: #333;
+}
+footer .archivoInformes .btn {
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  display: flex;
+  width: 240px;
+  height: 50px;
+  padding: 0.4rem 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  transition: all 0.3s linear;
+}
+footer .archivoInformes .btn {
+  background-color: #3c3c3c;
+}
+footer .archivoInformes .btnSecundario {
+  transition: all 0.3s linear;
+  background: #E9E9E9;
+  color: #808080;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .archivoInformes .btnSecundario svg {
+  display: block;
+    width: 24px;
+    height: 24px;
+}
+footer .archivoInformes .btnSecundario:hover {
+  color: #fff;
+  background-color: #3462A2;
+}
+footer .archivoInformes .btnSecundario:hover  svg path {
+  fill:#fff;
+}
+footer .archivoInformes .btnSecundario2022.active{
+  transform:translateY(-50px);
+}
+footer .archivoInformes .btnSecundario2023.active{
+  transform:translateY(-100px);
+}
 footer .linksDescargaContainer {
   margin-left: auto;
 }
-footer .menu a{
+footer .menu {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+footer .menu .linea {
+  display: flex;
+  align-items: center;
+}
+footer .menu a, footer .menu .derechos{
   color: #fff;
-  text-decoration: none;
-  padding: 0.3rem;
+  padding: 0.2rem;
 }
 .main {
   overflow: hidden;
@@ -141,6 +205,9 @@ footer .menu a{
 .intro {
   background-color: rgba(59, 109, 172,0.5);
 }
+.intro .text p { 
+  margin-bottom: 2rem;
+}
 .introContainer {
   display: flex;
   row-gap: 3rem;
@@ -148,6 +215,11 @@ footer .menu a{
   color: #fff;
   align-items: center;
   justify-content: center;
+}
+.introContainer h2 {
+  font-size: 3rem;
+  margin-top: 5rem;
+  font-weight: 400;
 }
 .portada, .Hpanel{
   height: 100vh;
@@ -174,6 +246,7 @@ footer .menu a{
 
 .portada h1{
   text-align: center;
+  text-shadow: 2px 2px 5px #525252;
 }
 .intro .text {
   max-width: 800px;
@@ -198,14 +271,16 @@ footer .menu a{
   font-size: 3rem;
   max-width: 50rem;
  }
+ .tituloSeccion {
+  left: 1px;
+  position: relative;
+ }
 .seccion1 .tituloSeccion {
   background-image: url("../img/paisaje-1-1.jpg");
 }
 .seccion1 .portadaSeccion {
   background-image: url("../img/paisaje-1-2.jpg");
 }
-
-
 .seccion1 .VpanelIzquierda {
   background-image: url("../img/paisaje-1-1.jpg");
   background-size: cover;
@@ -246,12 +321,25 @@ footer .menu a{
   column-gap: 2rem;
   margin-left: auto;
 }
-.linksDescargaContainer a {
+.linkDescarga svg{
+  width: 35px;
+  height: 35px;
+}
+.linkDescarga{
+  font-size: 16px;
   color: #fff;
   text-decoration: none;
-  border: 1px solid #fff;
-  padding: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  display: flex;
+  align-items: center;
+  transition:all 0.3s linear ;
+  background-color: var(--main-blue-color);
 }
+.linkDescarga:hover {
+  background: #fff;
+  color: #222;
+}
+
 .Vpanel {
   flex-direction: row;
   width: 100%;
@@ -261,6 +349,7 @@ footer .menu a{
   height: 100vh;
   display: flex;
   flex-wrap: nowrap;
+  background: gray;
 }
 .VScrollContainer { 
   display: flex;
@@ -295,7 +384,13 @@ footer .menu a{
 .nav p {
   margin-bottom: 0;
 }
-
+svg {
+  width: 100%;
+  height: 100%;
+}
+.grafica {
+  width: 700px;
+}
 .nav .menu li {
   list-style-type: none;
 }
@@ -320,24 +415,42 @@ footer .menu a{
   align-items: center;
   text-align: center;
   justify-content: center;
-  row-gap: 3rem;
+  row-gap: 2rem;
   color: #fff;
   width: 100%;
   background-color:white;
   padding: 5rem;
 }
-.VSlide:first-of-type h2 {
-  margin-top: 10rem;
+.imgHeader{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+.VSlide:first-of-type .imgHeader:first-of-type {
+  margin-top: 15rem;
+}
+.VSlide:first-of-type h2:first-of-type {
+  margin-top: 15rem;
+  margin-bottom: 3rem;
  }
+ .VSlide:last-of-type {
+  margin-bottom: 15rem;
+ } 
 .VSlide{
   color: #222;
 }
 .VSlide h2 {
   font-size: 3rem;
 }
-.VSlide svg {
+.svgContainerBig {
   max-width: 80%;
   margin: 0 auto;
+}
+.svgContainerSmall {
+  width: 10rem;
+}
+.svgContainerXSmall {
+  width: 6rem;
 }
 .red{
   color: var(--main-red);
@@ -350,10 +463,25 @@ footer .menu a{
   bottom: 0;
   width: 100%;
 }
+.container-text {
+  display: flex;
+  column-gap: 3rem;
+  text-align: left;
+}
+.container-text .col-50 { 
+  width: 50%;
+}
+.container-text img {
+  width: 100%;
+}
+.container-text p {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  line-height: 24px;
+}
 .cardsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   width: 100%;
   column-gap: 3rem;
@@ -375,6 +503,9 @@ footer .menu a{
   max-width: 25rem;
   text-align: center;
   row-gap: 0.5rem;
+}
+.card.BGred {
+  background-color: var(--secondary-red);
 }
 .card h4 {
   font-size: 2rem;
@@ -418,7 +549,7 @@ footer .menu a{
 }
 
 .bigText {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.3em;
 }
 .withIcon {
@@ -439,15 +570,68 @@ footer .menu a{
 .mobile-menu {
   display: none;
 }
+.mobile .svg {
+  width: 100%;
+}
+.seccion3 h3.red {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.cardText .logos-wrapper{
+  display: flex;
+}
+.destacado {
+  font-weight: 700;
+}
+.parrafo-destacado {
+  max-width: 500px;
+    text-align: left;
+    padding-left: 2rem;
+    border-left: 5px solid var(--main-blue-color);
+    font-size: 18px;
+    line-height: 24px;
+}
+.parrafo-destacado b { 
+  color: var(--main-blue-color);
+}
+.logosContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.logosContainer li {
+  width: 33%;
+  flex-direction: column;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
 
+.logosContainer img { 
+  margin: 0 auto;
+}
+.cardText {
+  padding-top: 5rem;
+}
+.cardText h3 {
+  padding-bottom: 3rem;
+}
+@media (min-width:800px) {
+  .mobile {
+    display: none;
+  }
+}
 @media  (max-width:800px) {
+  .desktop {
+    display: none;
+  }
   footer {
     display: none;
   }
   .nav-mobile {
-    padding: 5rem 3rem;
     display: flex;
     flex-direction: column;
+    row-gap: 2rem;
   }
   .nav-mobile img{
     margin-bottom: 3rem;
@@ -476,6 +660,9 @@ footer .menu a{
     background: var(--main-blue-color);
     display: flex;
     flex-direction: column;
+    padding: 5rem 3rem;
+    width: 100%;
+    row-gap: 3rem;
   }
 
   .lineas{
@@ -536,6 +723,7 @@ footer .menu a{
   }
   .cardsContainerH {
     flex-direction: column;
+    align-items: center;
    }
   .spacer {
     display: none;
@@ -544,6 +732,29 @@ footer .menu a{
     display: flex;
     flex-direction: column;
     row-gap: 4rem;
+  }
+  .footer-mobile, .footer-mobile .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-mobile .menu {
+    row-gap: 0.5rem;
+  }
+  .footer-mobile .menu, .footer-mobile .menu a{
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .mobile-menu .linksDescargaContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    row-gap: 1rem;
+  }
+  .cardText .logos-wrapper{
+    flex-direction: column;
+    align-items: center;
   }
 }
 

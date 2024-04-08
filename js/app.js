@@ -1,18 +1,10 @@
 addEventListener("DOMContentLoaded", (event) => {
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollToPlugin)
-
-
-let Hsections = gsap.utils.toArray(".Hpanel");
-let VsectionsIzq = gsap.utils.toArray(".VpanelIzquierda");
-let VpanelsDerecha = gsap.utils.toArray(".VpanelDerecha");
-let Vpanels  = gsap.utils.toArray("seccion1 .Vpanel");
-
+gsap.registerPlugin(ScrollToPlugin);
 
 const mainHeadingAnim  = gsap.timeline({paused:true})
-.from(".introContainer",{opacity:0.5})
-.to(".intro img",{y:-20},"<")
+
 .to(".intro h2 .line1", {x:90}, "<")
 .to(".intro h2 .line2", {x:-90}, "<")
 
@@ -36,12 +28,90 @@ ScrollTrigger.create({
   scrub:1
 })
 
+const btnArchivo = document.querySelector(".archivoInformes")
 
+btnArchivo.addEventListener("click", function(event){
+  event.preventDefault();
+  document.querySelector(".btnSecundario2022").classList.toggle('active');
+  document.querySelector(".btnSecundario2023").classList.toggle('active');
+})
+
+const titulosSeccion = document.querySelectorAll(".tituloSeccion .btnPrincipal")
+
+// Animación Títulos de sección
+titulosSeccion.forEach((tituloSeccion, index) => {
+
+  let titulo = tituloSeccion.querySelector("h2") 
+
+
+const animation = gsap.from(titulo, {
+  opacity: 0,
+  duration:1
+})
+ScrollTrigger.create({
+  trigger:titulo,
+  start:"50 80%",
+  end:"70% 60%",
+  animation:animation,
+  toggleActions: "play none none reverse"
+})
+})
+
+
+/*
+const graficaFondo = document.querySelector("#cartera-negocio #fondo");
+const graficaAno = document.querySelector("#cartera-negocio #año");
+const dataVida = document.getElementById("vida");
+const dataVidaTxt = document.getElementById("vida-txt");
+const dataSalud = document.getElementById("salud");
+const dataSaludTxt = document.getElementById("salud-txt");
+const dataAutos = document.getElementById("autos");
+const dataAutosTxt = document.getElementById("autos-txt");
+const dataMultirriesgos = document.getElementById("multirriesgos");
+const dataMultirriesgosTxt = document.getElementById("multirriesgos-txt");
+const dataDiversos = document.getElementById("diversos");
+const dataDiversosTxt = document.getElementById("diversos-txt");
 const grafica1 = document.getElementById("cartera-negocio");
 const graficaContainer = document.querySelector(".cartera-negocio-container");
+const graph1Ani = gsap.timeline({paused:true})
+.from ([graficaFondo, graficaAno], {scale:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([dataVida, dataVidaTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([dataSalud, dataSaludTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([dataAutos, dataAutosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([dataMultirriesgos, dataMultirriesgosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([dataDiversos, dataDiversosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
 
+  ScrollTrigger.create({
+    trigger:".cartera-negocio-container",
+    animation:graph1Ani,
+    pin:true,
+    scrub:1,
+    start:"30% 60%",
+    end:"80% 80%",
 
-
+  })
+*/
+  const graficaPrimasFondo = document.querySelector("#primas-fondo");
+  const graficaPrimasAno = document.querySelector("#primas-ano");
+  const dataPrimasVida = document.getElementById("primas-vida");
+  const dataPrimasVidaTxt = document.getElementById("primas-vida-txt");
+  const dataPrimasNoVida = document.getElementById("primas-no-vida");
+  const dataPrimasNoVidaTxt = document.getElementById("primas-no-vida-txt");
+  const graph2Ani = gsap.timeline({paused:true})
+  .from ([graficaPrimasFondo, graficaPrimasAno], {scale:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+  .from ([dataPrimasVida, dataPrimasVidaTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+  .from ([dataPrimasNoVida, dataPrimasNoVidaTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+  
+    ScrollTrigger.create({
+      trigger:".primas-container",
+      animation:graph2Ani,
+      pin:true,
+      markers:true,
+      scrub:true,
+      start:"10% 10%",
+      end:"60% 40%",
+  
+    })
 
   document.querySelectorAll(".nav .btn1").forEach((btn, index) => {
     btn.addEventListener("click", () => {
@@ -77,8 +147,8 @@ gsap.utils.toArray(".animNumber").forEach(number => {
       pin:true,
       scrollTrigger: {
           trigger: number,
-          start: "top 70%",
-          end: "bottom 80%",
+          start: "top 50%",
+          end: "bottom 60%",
           toggleActions: "play none none reverse"
          
       }
@@ -94,8 +164,8 @@ gsap.utils.toArray(".animCounter").forEach(box => {
       },
       scrollTrigger: {
           trigger: box,
-          start: "top 70%",
-          end: "bottom 80%",
+          start: "top 50%",
+          end: "bottom 60%",
           toggleActions: "play none none reverse"
       }
   }); })
@@ -110,8 +180,8 @@ gsap.utils.toArray(".animCounter").forEach(box => {
         },
         scrollTrigger: {
             trigger: box,
-            start: "top 70%",
-            end: "bottom 80%",
+            start: "top 50%",
+            end: "bottom 60%",
             toggleActions: "play none none reverse"
         }
     }); })
@@ -121,24 +191,32 @@ gsap.utils.toArray(".animCounter").forEach(box => {
     return decimals ? s[0] + "," + ((s[1] || "") + "00000000").substr(0, decimals) : s[0];
   }
 
+  gsap.set('.VSlide.anim1 p', {autoAlpha: 0, yPercent: 100});
+
+  ScrollTrigger.batch(".VSlide.anim1", {
+    onEnter: batch => {
+      batch.forEach((section, i) => {
+        gsap.to(section.querySelectorAll(".VSlide.anim1 p"), {
+          autoAlpha: 1,
+          yPercent: 0,
+          duration: 0.8,
+          ease: "power1.inOut", 
+          stagger: 0.1,
+          delay: i * 0.3
+        });
+      });
+    },
+    start: "100px top",
+    end: "bottom bottom"
+  });
+
 
 // create
 let mm = gsap.matchMedia();
 
 // add a media query. When it matches, the associated function will run
 mm.add("(min-width: 800px)", () => {
-const graficaFondo = document.querySelector("#cartera-negocio #fondo");
-const graficaAno = document.querySelector("#cartera-negocio #año");
-const dataVida = document.getElementById("vida");
-const dataVidaTxt = document.getElementById("vida-txt");
-const dataSalud = document.getElementById("salud");
-const dataSaludTxt = document.getElementById("salud-txt");
-const dataAutos = document.getElementById("autos");
-const dataAutosTxt = document.getElementById("autos-txt");
-const dataMultirriesgos = document.getElementById("multirriesgos");
-const dataMultirriesgosTxt = document.getElementById("multirriesgos-txt");
-const dataDiversos = document.getElementById("diversos");
-const dataDiversosTxt = document.getElementById("diversos-txt");
+
 let VScrollContainer = gsap.utils.toArray(".VScrollContainer");
 let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
 
@@ -178,23 +256,7 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
     })
   });
 
-const graph1Ani = gsap.timeline({paused:true})
-.from ([graficaFondo, graficaAno], {scale:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataVida, dataVidaTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataSalud, dataSaludTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataAutos, dataAutosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataMultirriesgos, dataMultirriesgosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataDiversos, dataDiversosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
 
-  ScrollTrigger.create({
-    trigger:".cartera-negocio-container",
-    animation:graph1Ani,
-    pin:true,
-    scrub:1,
-    start:"top top",
-    end:"bottom center",
-    pinSpacing:false
-  })
 
 })
 

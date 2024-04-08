@@ -12,6 +12,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   
   <meta name="description" content="">
 
@@ -43,20 +45,22 @@
         <li><a class="btn btn1" href="#">Información de negocio</a></li>
         <li><a class="btn btn2" href="#">Clientes</a></li>
         <li><a class="btn btn3" href="#">Innovación</a></li>
-        <li><a class="btn btn4" href="#">Compromiso Social</a></li>
+        <li><a class="btn btn4" href="#">Compromiso social</a></li>
       </ul>
+    </div>
+    <div class="linksDescargaContainer">
+      <a class="linkDescarga1 linkDescarga" href="#">Descargar informe completo 2022</a>
+      <a class="linkDescarga2 linkDescarga" href="#">Descargar EINF 2022</a>
+      <a class="linkDescarga0 linkDescarga" href="#">Informe anual FIATC 2022</a>
     </div>
     <div class="footer-mobile">
       <div class="menu">
-        <a href="https://www.fiatc.es/politica-de-cookies" target="_blank">Política de cookies</a><span class="footSep">|</span>
-        <a href="https://www.fiatc.es/condiciones-generales" target="_blank">Condiciones generales</a><span class="footSep">|</span>
-        <a href="https://www.fiatc.es/proteccion-de-datos" target="_blank">Protección de datos</a><span class="footSep">|</span>
-        <a href="https://web.fiatc.es/es/js/redirect_corporativa.html?module=ticketing/new_ticket_cumplimiento" target="_blank">Cumplimiento normativo</a><span class="footSep">-</span>2023. Todos los derechos reservados.
+        <a href="https://www.fiatc.es/politica-de-cookies" target="_blank">Política de cookies</a>
+        <a href="https://www.fiatc.es/condiciones-generales" target="_blank">Condiciones generales</a>
+        <a href="https://www.fiatc.es/proteccion-de-datos" target="_blank">Protección de datos</a>
+        <a href="https://web.fiatc.es/es/js/redirect_corporativa.html?module=ticketing/new_ticket_cumplimiento" target="_blank">Cumplimiento normativo</a>2023. Todos los derechos reservados.
       </div>
-              <div class="linksDescargaContainer">
-        <a class="linkDescarga1" href="#">Descargar informe completo 2022</a>
-        <a class="linkDescarga2" href="#">Descargar EINF 2022</a>
-      </div>
+       
     </div>
   </div>
   <div class="portada portada1">
@@ -79,20 +83,63 @@
         <li><a class="btn1" href="#">Información de negocio</a></li>
         <li><a class="btn2" href="#">Clientes</a></li>
         <li><a class="btn3" href="#">Innovación</a></li>
-        <li><a class="btn4" href="#">Compromiso Social</a></li>
+        <li><a class="btn4" href="#">Compromiso social</a></li>
       </ul>
     </nav>
 
     <footer>
-        <div class="menu">
-          <a href="https://www.fiatc.es/politica-de-cookies" target="_blank">Política de cookies</a><span class="footSep">|</span>
-          <a href="https://www.fiatc.es/condiciones-generales" target="_blank">Condiciones generales</a><span class="footSep">|</span>
-          <a href="https://www.fiatc.es/proteccion-de-datos" target="_blank">Protección de datos</a><span class="footSep">|</span>
-          <a href="https://web.fiatc.es/es/js/redirect_corporativa.html?module=ticketing/new_ticket_cumplimiento" target="_blank">Cumplimiento normativo</a><span class="footSep">-</span>2023. Todos los derechos reservados.
+        <div class="archivoInformes">
+          <a href="#" class="btn btnSecundario btnSecundario2022">2022
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_2_81" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <rect width="24" height="24" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_2_81)">
+            <path d="M6.18848 17.2885L5.5 16.6L15.5808 6.5H6.28845V5.5H17.2885V16.5H16.2885V7.2077L6.18848 17.2885Z" fill="#3462A2"/>
+            </g>
+            </svg></a>
+          <a href="#" class="btn btnSecundario btnSecundario2023">2023
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_2_81" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <rect width="24" height="24" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_2_81)">
+            <path d="M6.18848 17.2885L5.5 16.6L15.5808 6.5H6.28845V5.5H17.2885V16.5H16.2885V7.2077L6.18848 17.2885Z" fill="#3462A2"/>
+            </g>
+            </svg></a>
+          <a href="#" class="btn btnPrincipal"><img src="img/icono-inbox.svg"/><span>ARCHIVO Informes FIATC</span></a>
+
+          
         </div>
-                <div class="linksDescargaContainer">
-          <a class="linkDescarga1" href="#">Descargar informe completo 2022</a>
-          <a class="linkDescarga2" href="#">Descargar EINF 2022</a>
+        <div class="menu">
+          <div class="linea">
+            <a href="https://www.fiatc.es/politica-de-cookies" target="_blank">Política de cookies</a><span class="footSep">|</span>
+            <a href="https://www.fiatc.es/condiciones-generales" target="_blank">Condiciones generales</a><span class="footSep">|</span>
+            <a href="https://www.fiatc.es/proteccion-de-datos" target="_blank">Protección de datos</a><span class="footSep">|</span>
+            <a href="https://web.fiatc.es/es/js/redirect_corporativa.html?module=ticketing/new_ticket_cumplimiento" target="_blank">Cumplimiento normativo</a>
+          </div>
+          <div class="linea">
+            <span class="derechos">Año 2023. Todos los derechos reservados.</span>
+          </div>
+
+        </div>
+        <div class="linksDescargaContainer">
+          <a class="linkDescarga1 linkDescarga" href="#"><svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_2_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="37" height="38">
+            <rect y="0.5" width="37" height="37" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_2_48)">
+            <path d="M18.4999 24.5955L13.1258 19.2214L14.0607 18.3003L17.8477 22.0675V8.20834H19.1522V22.0675L22.9391 18.3003L23.874 19.2214L18.4999 24.5955ZM9.96144 29.7917C9.32994 29.7917 8.79654 29.574 8.36122 29.1387C7.92591 28.7034 7.70825 28.17 7.70825 27.5385V23.5282H9.01273V27.5385C9.01273 27.7757 9.11155 27.9931 9.3092 28.1907C9.50684 28.3884 9.72425 28.4872 9.96144 28.4872H27.0384C27.2756 28.4872 27.493 28.3884 27.6906 28.1907C27.8883 27.9931 27.9871 27.7757 27.9871 27.5385V23.5282H29.2916V27.5385C29.2916 28.17 29.0739 28.7034 28.6386 29.1387C28.2033 29.574 27.6699 29.7917 27.0384 29.7917H9.96144Z" fill="#DEDDE3"/>
+            </g>
+            </svg>Descargar informe completo 2022</a>
+          <a class="linkDescarga2 linkDescarga" href="#"><svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_2_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="37" height="38">
+            <rect y="0.5" width="37" height="37" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_2_48)">
+            <path d="M18.4999 24.5955L13.1258 19.2214L14.0607 18.3003L17.8477 22.0675V8.20834H19.1522V22.0675L22.9391 18.3003L23.874 19.2214L18.4999 24.5955ZM9.96144 29.7917C9.32994 29.7917 8.79654 29.574 8.36122 29.1387C7.92591 28.7034 7.70825 28.17 7.70825 27.5385V23.5282H9.01273V27.5385C9.01273 27.7757 9.11155 27.9931 9.3092 28.1907C9.50684 28.3884 9.72425 28.4872 9.96144 28.4872H27.0384C27.2756 28.4872 27.493 28.3884 27.6906 28.1907C27.8883 27.9931 27.9871 27.7757 27.9871 27.5385V23.5282H29.2916V27.5385C29.2916 28.17 29.0739 28.7034 28.6386 29.1387C28.2033 29.574 27.6699 29.7917 27.0384 29.7917H9.96144Z" fill="#DEDDE3"/>
+            </g>
+            </svg>Descargar EINF 2022</a>
         </div>
     </footer>
       <!--  ==========================================================================
@@ -127,9 +174,7 @@
             </div>
             <div class="VpanelDerecha">
               <div class="VSlide">
-                <h2 class="red">Hechos relevantes del ejercicio 2022</h2>
-              </div>
-              <div class="VSlide"> 
+                <h2 class="red">Hechos relevantes<br> del ejercicio 2022</h2> 
                 <h2>Volumen de negocio<br><span class="animNumber">806.979.509,76€</span></h2>
                 <p class="bigText">Nos encontramos entre las 20 primeras entidades de seguros y somos la segunda mutua del Estado.</p>
                 <div class="cardsContainer cardsContainerH">
@@ -149,7 +194,7 @@
                     <h4><span class="animCounter">12110916.15</span>€</h4>
                   </div>
                 </div>
-                  <div class="cardsContainer"> 
+                  <div class="cardsContainer cardsContainerH"> 
                   <div class="card">
                     <div class="iconContainer">
                       <img width="100" src="img/noun-grafica-3.svg"/>
@@ -159,17 +204,17 @@
                   </div>
                 </div>
                   <div class="cardsContainer cardsContainerH">
-                    <div class="card">
+                    <div class="card BGred">
                       <div class="iconContainer">
                         <img width="100" src="img/iconos-summit.svg"/>
                       </div>
-                      <h3>Cesión de la cartera de salud de Murimary adquisición de posición mayoritaria en IPRESA</h3>
+                      <p>Cesión de la cartera de salud de Murimary adquisición de posición mayoritaria en IPRESA</p>
                     </div>   
-                  <div class="card">
+                  <div class="card BGred">
                     <div class="iconContainer">
                       <img width="100" src="img/iconos-summit.svg"/>
                     </div>
-                    <h3>Obtención de la autorización para operar en el ramo de Caución y comercialización de las primeras pólizas.</h3>
+                    <p>Obtención de la autorización para operar en el ramo de Caución y comercialización de las primeras pólizas.</p>
                   </div>
                 </div>
              
@@ -178,62 +223,175 @@
                 <h2 class="red">Primas</h2>
                 <h2>Volumen de negocio<br><span class="animCounter">806979509.76</span>€</h2>
                 <p class="bigText">Crecimiento del <strong>4,41 %</strong> respecto al ejercicio anterior.</p>
+                <p>El volumen de negocio de Andorra fue de <strong>3.528.691,44 euros</strong> con un crecimiento del 5,03 %.</p>
+                <dotlottie-player src="animations/grafica-animada.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
               </div>
-              <div class="VSlide cartera-negocio-container">
-                <?xml version="1.0" encoding="utf-8"?>
-              <svg id="cartera-negocio" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <div class="VSlide primas-container desktop">
+               <?xml version="1.0" encoding="utf-8"?>
+                <!--
+                <svg id="cartera-negocio" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="30 30 290 550" style="enable-background:new 0 0 349.1 349.1;" xml:space="preserve">
+                <style type="text/css">
+                  .st0{fill:#EFEFEF;}
+                  .st1{fill:#B69678;}
+                  .st2{font-family:'Noto Sans';}
+                  .st3{font-size:11px;}
+                  .st4{font-family:'Noto Sans';}
+                  .st5{font-size:18.4106px;}
+                  .st6{fill:#E3BB96;}
+                  .st7{fill:#7F7F7F;}
+                  .st8{fill:#8499B4;}
+                  .st9{fill:#3B6DAC;}
+                  .st10{font-size:25.088px;}
+                </style>
+                <g id="fondo">
+                  <circle class="st0" cx="174.5" cy="174.5" r="97.4"/>
+                </g>
+                <g id="diversos" class="diversos">
+                  <path id="_x34_" class="st1" d="M116.2,106c16.3-13.9,37-21.5,58.3-21.5l0,40c-11.9,0-23.4,4.2-32.4,11.9L116.2,106z"/>
+                </g>
+                <g id="diversos-txt" class="diversos">
+                  <text transform="matrix(1 0 0 1 109.2515 56.7951)"><tspan x="0" y="0" class="st2 st3">Diversos</tspan><tspan x="2.9" y="22.1" class="st4 st5">11%</tspan></text>
+                </g>
+                <g id="multirriesgos" class="multirriesgos">
+                  <path id="_x33_" class="st6" d="M84.6,177.4c-0.9-27.4,10.8-53.7,31.6-71.4l25.9,30.5c-11.6,9.9-18,24.5-17.6,39.7L84.6,177.4z"/>
+                </g>
+                <g id="multirriesgos-txt"  class="multirriesgos">
+                  <text transform="matrix(1 0 0 1 21.1707 121.3989)"><tspan x="0" y="0" class="st2 st3">Multirriesgos</tspan><tspan x="13.6" y="22.1" class="st4 st5">14%</tspan></text>
+                </g>
+                <g id="autos"  class="autos">
+                  <path id="_x32_" class="st7" d="M130.4,253c-27.4-15.4-44.8-44.1-45.8-75.5l40-1.3c0.6,17.5,10.2,33.4,25.4,42L130.4,253z"/>
+                </g>
+                <g id="autos-txt" class="autos">
+                  <text transform="matrix(1 0 0 1 53.9377 236.2119)"><tspan x="0" y="0" class="st2 st3">Autos</tspan><tspan x="-4" y="22.1" class="st4 st5">16%</tspan></text>
+                </g>
+                <g id="salud" class="salud">
+                  <path id="_x31_" class="st8" d="M248.4,226c-26.5,38-77.6,49.7-118,26.9l19.6-34.9c22.4,12.6,50.8,6.2,65.5-15L248.4,226z"/>
+                </g>
+                <g id="salud-txt" class="salud">
+                  <text transform="matrix(1 0 0 1 188.1084 284.3222)"><tspan x="0" y="0" class="st2 st3">Salud</tspan><tspan x="-5.1" y="22.1" class="st4 st5">23%</tspan></text>
+                </g>
+                <g id="vida" class="vida">
+                  <path id="_x30_" class="st9" d="M174.5,84.5c49.7,0,90,40.3,90,90c0,18.4-5.6,36.4-16.2,51.5l-32.8-22.9
+                    c15.8-22.6,10.2-53.8-12.4-69.6c-8.4-5.9-18.4-9-28.6-9V84.5z"/>
+                </g>
+                <g id="vida-txt" class="vida">
+                  <text transform="matrix(1 0 0 1 268.4327 96.3245)"><tspan x="0" y="0" class="st2 st3">Vida</tspan><tspan x="-7.4" y="22.1" class="st4 st5">34%</tspan></text>
+                </g>
+                <g id="año">
+                  <text transform="matrix(1 0 0 1 145.3564 183.9025)" class="st4 st10">2022</text>
+                </g>
+                </svg>
+                -->
+
+
+              <svg id="primas" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 349.1 349.1" style="enable-background:new 0 0 349.1 349.1;" xml:space="preserve">
               <style type="text/css">
                 .st0{fill:#EFEFEF;}
-                .st1{fill:#B69678;}
-                .st2{font-family:'Noto Sans';}
+                .st1{fill:#3B6DAC;}
                 .st3{font-size:11px;}
-                .st4{font-family:'Noto Sans';}
+                
                 .st5{font-size:18.4106px;}
                 .st6{fill:#E3BB96;}
-                .st7{fill:#7F7F7F;}
-                .st8{fill:#8499B4;}
-                .st9{fill:#3B6DAC;}
-                .st10{font-size:25.088px;}
+                .st7{font-size:34.0355px;}
               </style>
-              <g id="fondo">
-                <circle class="st0" cx="174.5" cy="174.5" r="97.4"/>
+              <g id="primas-fondo">
+                <circle class="st0" cx="175.9" cy="170.8" r="132.2"/>
               </g>
-              <g id="diversos" class="diversos">
-                <path id="_x34_" class="st1" d="M116.2,106c16.3-13.9,37-21.5,58.3-21.5l0,40c-11.9,0-23.4,4.2-32.4,11.9L116.2,106z"/>
+              <g id="primas-vida">
+                <path id="_x31__00000172432428768024427170000018277408855775430049_" class="st1" d="M76.5,242.1
+                  c-39.3-54.1-27.3-129.9,26.8-169.3c20.7-15,45.6-23.1,71.2-23.2l0,53.9c-37.2,0-67.3,30.2-67.3,67.3c0,14.2,4.5,28.1,12.9,39.6
+                  L76.5,242.1z"/>
               </g>
-              <g id="diversos-txt" class="diversos">
-                <text transform="matrix(1 0 0 1 109.2515 56.7951)"><tspan x="0" y="0" class="st2 st3">Diversos</tspan><tspan x="2.9" y="22.1" class="st4 st5">11%</tspan></text>
+              <g id="primas-no-vida-txt">
+                <text transform="matrix(1 0 0 1 240.1155 308.4603)"><tspan x="0" y="0" class="st2 st3">Seguros de no vida</tspan><tspan x="14.6" y="22.1" class="st4 st5">65,89%</tspan></text>
               </g>
-              <g id="multirriesgos" class="multirriesgos">
-                <path id="_x33_" class="st6" d="M84.6,177.4c-0.9-27.4,10.8-53.7,31.6-71.4l25.9,30.5c-11.6,9.9-18,24.5-17.6,39.7L84.6,177.4z"/>
+              <g id="primas-no-vida">
+                <path id="_x30_" class="st6" d="M174.5,49.6c66.9,0,121.2,54.3,121.2,121.2S241.5,292,174.5,292c-38.8,0-75.2-18.6-98-49.9
+                  l43.6-31.7c21.9,30.1,64,36.7,94,14.9s36.7-64,14.9-94c-12.7-17.4-32.9-27.7-54.5-27.7V49.6z"/>
               </g>
-              <g id="multirriesgos-txt"  class="multirriesgos">
-                <text transform="matrix(1 0 0 1 21.1707 121.3989)"><tspan x="0" y="0" class="st2 st3">Multirriesgos</tspan><tspan x="13.6" y="22.1" class="st4 st5">14%</tspan></text>
+              <g id="primas-vida-txt">
+                <text transform="matrix(1 0 0 1 11.7435 31.2662)"><tspan x="0" y="0" class="st2 st3">Seguros de vida</tspan><tspan x="7" y="22.1" class="st4 st5">34,11%</tspan></text>
               </g>
-              <g id="autos"  class="autos">
-                <path id="_x32_" class="st7" d="M130.4,253c-27.4-15.4-44.8-44.1-45.8-75.5l40-1.3c0.6,17.5,10.2,33.4,25.4,42L130.4,253z"/>
-              </g>
-              <g id="autos-txt" class="autos">
-                <text transform="matrix(1 0 0 1 53.9377 236.2119)"><tspan x="0" y="0" class="st2 st3">Autos</tspan><tspan x="-4" y="22.1" class="st4 st5">16%</tspan></text>
-              </g>
-              <g id="salud" class="salud">
-                <path id="_x31_" class="st8" d="M248.4,226c-26.5,38-77.6,49.7-118,26.9l19.6-34.9c22.4,12.6,50.8,6.2,65.5-15L248.4,226z"/>
-              </g>
-              <g id="salud-txt" class="salud">
-                <text transform="matrix(1 0 0 1 188.1084 284.3222)"><tspan x="0" y="0" class="st2 st3">Salud</tspan><tspan x="-5.1" y="22.1" class="st4 st5">23%</tspan></text>
-              </g>
-              <g id="vida" class="vida">
-                <path id="_x30_" class="st9" d="M174.5,84.5c49.7,0,90,40.3,90,90c0,18.4-5.6,36.4-16.2,51.5l-32.8-22.9
-                  c15.8-22.6,10.2-53.8-12.4-69.6c-8.4-5.9-18.4-9-28.6-9V84.5z"/>
-              </g>
-              <g id="vida-txt" class="vida">
-                <text transform="matrix(1 0 0 1 268.4327 96.3245)"><tspan x="0" y="0" class="st2 st3">Vida</tspan><tspan x="-7.4" y="22.1" class="st4 st5">34%</tspan></text>
-              </g>
-              <g id="año">
-                <text transform="matrix(1 0 0 1 145.3564 183.9025)" class="st4 st10">2022</text>
+              <g id="primas-ano">
+                <text transform="matrix(1 0 0 1 134.9492 187.2431)" class="st4 st7">2022</text>
               </g>
               </svg>
+
+ 
+
+              </div>
+              <div class="VSlide mobile">
+                <!-- Generator: Adobe Illustrator 28.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 349.1 510" style="enable-background:new 0 0 349.1 510;" xml:space="preserve">
+                <style type="text/css">
+                  .mst0{fill:#EFEFEF;}
+                  .mst1{fill:#B69678;}
+                  .mst2{fill:#FFFFFF;}
+                  .mst3{font-family:'Noto Sans';}
+                  .mst4{font-size:28.7162px;}
+                  .mst5{fill:#E3BB96;}
+                  .mst6{font-family:'Noto Sans';}
+                  .mst7{font-size:18.4106px;}
+                  .mst8{fill:#7F7F7F;}
+                  .mst9{fill:#8499B4;}
+                  .mst10{fill:#3B6DAC;}
+                  .mst11{font-size:42.166px;}
+                </style>
+                <g id="fondo">
+                  <circle class="mst0" cx="174.5" cy="174.5" r="163.7"/>
+                </g>
+                <g id="diversos">
+                  <path id="_x34_" class="mst1" d="M76.5,59.4c27.4-23.3,62.1-36.1,98-36.1l0,67.2c-20,0-39.3,7.1-54.5,20.1L76.5,59.4z"/>
+                </g>
+                <g id="diversos-txt">
+                  <text transform="matrix(1 0 0 1 102.7149 73.4526)" class="mst2 mst3 mst4">11%</text>
+                </g>
+                <g id="multirriesgos">
+                  <path id="_x33_" class="mst5" d="M23.3,179.4c-1.5-46,18.1-90.2,53.1-120l43.6,51.2c-19.5,16.6-30.3,41.1-29.5,66.7L23.3,179.4z"/>
+                </g>
+                <g id="multirriesgos-txt">
+                  <text transform="matrix(1 0 0 1 37.7897 138.5285)" class="mst2 mst3 mst4">14%</text>
+                  <rect x="18" y="445.4" class="mst5" width="161.6" height="19.1"/>
+                  <text transform="matrix(1 0 0 1 192.1363 459.9149)" class="mst6 mst7">Multirriesgos</text>
+                </g>
+                <g id="autos">
+                  <path id="_x32_" class="mst8" d="M100.3,306.3c-46.1-25.9-75.3-74.1-77-126.9l67.2-2.2c0.9,29.4,17.2,56.1,42.8,70.5L100.3,306.3z"
+                    />
+                </g>
+                <g id="autos-txt">
+                  <rect x="18" y="472.9" class="st1" width="161.6" height="19.1"/>
+                  <text transform="matrix(1 0 0 1 192.1363 487.445)" class="mst6 mst7">Diversos</text>
+                  <text transform="matrix(1 0 0 1 48.3008 244.4308)" class="mst2 mst3 mst4">16%</text>
+                  <rect x="18" y="417.8" class="mst8" width="161.6" height="19.1"/>
+                  <text transform="matrix(1 0 0 1 192.1363 432.3848)" class="mst6 mst7">Autos</text>
+                </g>
+                <g id="salud">
+                  <path id="_x31_" class="mst9" d="M298.6,261.1C254,325,168.2,344.6,100.3,306.3l33-58.6c37.7,21.2,85.4,10.4,110.2-25.2L298.6,261.1
+                    z"/>
+                </g>
+                <g id="salud-txt">
+                  <text transform="matrix(1 0 0 1 165.0498 298.9091)" class="mst2 mst3 mst4">23%</text>
+                  <text transform="matrix(1 0 0 1 192.1363 406.9323)" class="mst6 mst7">Salud</text>
+                  <rect x="18" y="392.4" class="st9" width="161.6" height="19.1"/>
+                </g>
+                <g id="vida">
+                  <path id="_x30_" class="mst10" d="M174.5,23.3c83.5,0,151.3,67.7,151.3,151.3c0,30.9-9.5,61.2-27.2,86.5l-55.1-38.5
+                    c26.6-38.1,17.2-90.5-20.9-117c-14.1-9.8-30.9-15.1-48.1-15.1V23.3z"/>
+                </g>
+                <g id="vida-txt">
+                  <text transform="matrix(1 0 0 1 255.1859 142.1703)" class="mst2 mst3 mst4">34%</text>
+                  <text transform="matrix(1 0 0 1 192.1363 377.9422)" class="mst6 mst7">Vida</text>
+                  <rect x="18.7" y="363.4" class="mst10" width="161.6" height="19.1"/>
+                </g>
+                <g id="año">
+                  <text transform="matrix(1 0 0 1 125.4926 190.2783)" class="mst6 mst11">2022</text>
+                </g>
+                </svg>
+
+                  
               </div>
               <div class="spacer"></div>
               <div class="VSlide">
@@ -275,79 +433,24 @@
                     </div>
                   </div>
                   <div class="cardsContainer cardsContainerH">
-                    <div class="card">
+                    <div class="card BGred">
                       <p>Total no vida</p>
                       <h4><span class="animCounter">531.71</span>M€</h4>
                       <p>+7,61%</p>
                     </div>
-                    <div class="card">
+                    <div class="card BGred">
                       <p>Total vida</p>
                       <h4><span class="animCounter">275.27</span>M€</h4>
                       <p>+7,61%</p>
                     </div>
-                    <div class="card">
+                    <div class="card BGred">
                       <p>Total primas</p>
                       <h4><span class="animCounter">806.98</span>M€</h4>
                       <p>+7,61%</p>
                     </div>
                   </div>
               </div>
-              <div class="VSlide cartera-negocio-container">
-                <?xml version="1.0" encoding="utf-8"?>
-                <svg id="cartera-negocio" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 349.1 349.1" style="enable-background:new 0 0 349.1 349.1;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#EFEFEF;}
-	.st1{fill:#B69678;}
-	.st2{font-family:'Noto Sans';}
-	.st3{font-size:11px;}
-	.st4{font-family:'Noto Sans';}
-	.st5{font-size:18.4106px;}
-	.st6{fill:#E3BB96;}
-	.st7{fill:#7F7F7F;}
-	.st8{fill:#8499B4;}
-	.st9{fill:#3B6DAC;}
-	.st10{font-size:25.088px;}
-</style>
-<g id="fondo">
-	<circle class="st0" cx="174.5" cy="174.5" r="97.4"/>
-</g>
-<g id="diversos" class="diversos">
-	<path id="_x34_" class="st1" d="M116.2,106c16.3-13.9,37-21.5,58.3-21.5l0,40c-11.9,0-23.4,4.2-32.4,11.9L116.2,106z"/>
-</g>
-<g id="diversos-txt" class="diversos">
-	<text transform="matrix(1 0 0 1 109.2515 56.7951)"><tspan x="0" y="0" class="st2 st3">Diversos</tspan><tspan x="2.9" y="22.1" class="st4 st5">11%</tspan></text>
-</g>
-<g id="multirriesgos" class="multirriesgos">
-	<path id="_x33_" class="st6" d="M84.6,177.4c-0.9-27.4,10.8-53.7,31.6-71.4l25.9,30.5c-11.6,9.9-18,24.5-17.6,39.7L84.6,177.4z"/>
-</g>
-<g id="multirriesgos-txt"  class="multirriesgos">
-	<text transform="matrix(1 0 0 1 21.1707 121.3989)"><tspan x="0" y="0" class="st2 st3">Multirriesgos</tspan><tspan x="13.6" y="22.1" class="st4 st5">14%</tspan></text>
-</g>
-<g id="autos"  class="autos">
-	<path id="_x32_" class="st7" d="M130.4,253c-27.4-15.4-44.8-44.1-45.8-75.5l40-1.3c0.6,17.5,10.2,33.4,25.4,42L130.4,253z"/>
-</g>
-<g id="autos-txt" class="autos">
-	<text transform="matrix(1 0 0 1 53.9377 236.2119)"><tspan x="0" y="0" class="st2 st3">Autos</tspan><tspan x="-4" y="22.1" class="st4 st5">16%</tspan></text>
-</g>
-<g id="salud" class="salud">
-	<path id="_x31_" class="st8" d="M248.4,226c-26.5,38-77.6,49.7-118,26.9l19.6-34.9c22.4,12.6,50.8,6.2,65.5-15L248.4,226z"/>
-</g>
-<g id="salud-txt" class="salud">
-	<text transform="matrix(1 0 0 1 188.1084 284.3222)"><tspan x="0" y="0" class="st2 st3">Salud</tspan><tspan x="-5.1" y="22.1" class="st4 st5">23%</tspan></text>
-</g>
-<g id="vida" class="vida">
-	<path id="_x30_" class="st9" d="M174.5,84.5c49.7,0,90,40.3,90,90c0,18.4-5.6,36.4-16.2,51.5l-32.8-22.9
-		c15.8-22.6,10.2-53.8-12.4-69.6c-8.4-5.9-18.4-9-28.6-9V84.5z"/>
-</g>
-<g id="vida-txt" class="vida">
-	<text transform="matrix(1 0 0 1 268.4327 96.3245)"><tspan x="0" y="0" class="st2 st3">Vida</tspan><tspan x="-7.4" y="22.1" class="st4 st5">34%</tspan></text>
-</g>
-<g id="año">
-	<text transform="matrix(1 0 0 1 145.3564 183.9025)" class="st4 st10">2022</text>
-</g>
-                </svg>
-              </div>
+
             </div>
           </div>
         </div>
@@ -368,13 +471,10 @@
             <div class="VpanelDerecha">
               <div class="VSlide">
                 <h2 class="red">En 2022 ofrecimos servicio <br>a <span class="animCounterNoDecimals">601096</span> clientes</h2>
-              </div>
-              <div class="VSlide">
-                
-                <div class="cardsContainerGrid">
-                  <h2 class="cardsContainerHeading">
-                    Servicios de Asistencia<br> e Indeminaciones
-                  </h2>
+                <h2 class="cardsContainerHeading">
+                  Servicios de Asistencia<br> e Indeminaciones
+                </h2>
+                <div class="cardsContainer cardsContainerH">
                     <div class="iconCardContainer">
                       <div class="iconContainer">
                         <img width="100" src="img/iconos-hogares.png"/>
@@ -402,6 +502,8 @@
                         <h4><span class="animCounterNoDecimals">113479</span></h4>
                       </div>
                     </div>
+                    </div>
+                    <div class="cardsContainer cardsContainerH">
                     <div class="iconCardContainer">
                       <div class="iconContainer">
                         <img width="100" src="img/iconos-viajes.png"/>
@@ -432,10 +534,11 @@
                 </div>
               </div>
               <div class="VSlide">
-                <div class="cardsContainerGrid">
+                
                   <h2 class="cardsContainerHeading">
                     Prestaciones
                   </h2>
+                  <div class="cardsContainer cardsContainerH">
                     <div class="iconCardContainer">
                       <div class="iconContainer">
                         <img width="100" src="img/iconos-decesos.png"/>
@@ -463,6 +566,8 @@
                         <h4><span class="animCounterNoDecimals">1882</span></h4>
                       </div>
                     </div>
+                  </div>
+                  <div class="cardsContainer cardsContainerH">
                     <div class="iconCardContainer">
                       <div class="iconContainer">
                         <img width="100" src="img/iconos-seguro-vida.png"/>
@@ -493,10 +598,11 @@
                 </div>
               </div>
               <div class="VSlide"> 
-                <div class="cardsContainerGrid">
-                  <h2 class="cardsContainerHeading">
-                    Servicios Atendidos<br> en Seguros de Salud
-                  </h2>
+                <h2 class="cardsContainerHeading">
+                  Servicios Atendidos<br> en Seguros de Salud
+                </h2>
+            
+                  <div class="cardsContainer cardsContainerH">
                     <div class="iconCardContainer">                      
                     <div class="iconContainer">
                       <img width="100" src="img/iconos-diagnostico.png"/>
@@ -570,18 +676,45 @@
             </div>
             <div class="VpanelDerecha">
               <div class="VSlide">
-                <h2 class="red">Salud: nuevas coberturas, avances en telemedicina y mejoras en la App</h2>
-                <p class="bigText"><img src="img/iconos-check.png" width="40"> Incorporación de una agenda virtual de citas médicas para los centros más representativos de cada zona.</p>
-                  <p class="bigText"><img src="img/iconos-check.png" width="40"> Acceso a recetas médicas expedidas en centros propios y al área privada de clientes de Clínica Diagonal.</p>
-                  <p class="bigText"><img src="img/iconos-check.png" width="40"> Servicio “Mi experto en nutrición”, con consejos y seguimiento nutricional y deportivo experto.</p>
-                  <p class="bigText"><img src="img/iconos-check.png" width="40"> Nuevas coberturas que nos permiten adaptarnos a las necesidades de nuestros clientes como el drenaje linfático terapéutico (por prescripción médica) y las pruebas genéticas para la detección de la celiaquía.</p>
+                <div class="container-text">
+                  <div class="col-50">
+                    <h3 class="red">Salud: nuevas coberturas, avances en telemedicina y mejoras en la App</h3>
+                    <p>Incorporación de una <span class="destacado">agenda virtual de citas médicas</span> para los centros más representativos de cada zona.</p>
+                      <p>Acceso a <span class="destacado">recetas médicas</span> expedidas en centros propios y al área privada de clientes de Clínica Diagonal.</p>
+                      <p><span class="destacado">Servicio “Mi experto en nutrición”</span>, con consejos y seguimiento nutricional y deportivo experto.</p>
+                      <p><span class="destacado">Nuevas coberturas </span>que nos permiten adaptarnos a las necesidades de nuestros clientes como el drenaje linfático terapéutico (por prescripción médica) y las pruebas genéticas para la detección de la celiaquía.</p> 
+                  </div>
+                  <div class="col-50">
+                    <img src="img/inn01.jpg" />
+                  </div>
+                </div>
               </div>
               <div class="VSlide">
-                <h2 class="red">Nuevo seguro de caución</h2>
-                <p class="bigText"><img src="img/iconos-check.png" width="40"> Incorporación de una agenda virtual de citas médicas para los centros más representativos de cada zona.</p>
-                  <p class="bigText"><img src="img/iconos-check.png" width="40"> Acceso a recetas médicas expedidas en centros propios y al área privada de clientes de Clínica Diagonal.</p>
-                  <p class="bigText"><img src="img/iconos-check.png" width="40"> Servicio “Mi experto en nutrición”, con consejos y seguimiento nutricional y deportivo experto.</p>
-                  <p class="bigText"><img src="img/iconos-check.png" width="40"> Nuevas coberturas que nos permiten adaptarnos a las necesidades de nuestros clientes como el drenaje linfático terapéutico (por prescripción médica) y las pruebas genéticas para la detección de la celiaquía.</p>
+                <div class="container-text">
+                  <div class="col-50">
+                    <h3 class="red">Salud: nuevas coberturas, avances en telemedicina y mejoras en la App</h3>
+                    <p>Incorporación de una agenda virtual de citas médicas para los centros más representativos de cada zona.</p>
+                      <p>Acceso a recetas médicas expedidas en centros propios y al área privada de clientes de Clínica Diagonal.</p>
+                      <p>Servicio “Mi experto en nutrición”, con consejos y seguimiento nutricional y deportivo experto.</p>
+                      <p>Nuevas coberturas que nos permiten adaptarnos a las necesidades de nuestros clientes como el drenaje linfático terapéutico (por prescripción médica) y las pruebas genéticas para la detección de la celiaquía.</p> 
+                  </div>
+                  <div class="col-50">
+                    <img src="img/inn02.jpg" />
+                  </div>
+                </div>
+              </div>
+              <div class="VSlide">
+                <div class="container-text">
+                  <div class="col-50">
+                    <h3 class="red">Nuevo seguro de caución</h3>
+                    <p>Empezamos a operar en este seguro a través de la agencia de suscripción Credicand, que cuenta con una amplia experiencia en este ámbito.</p>
+                      <p>Acceso a recetas médicas expedidas en centros propios y al área privada de clientes de Clínica Diagonal.</p>
+                      <p>El seguro de caución supone una alternativa al aval bancario exigido a todas aquellas empresas que quieren participar en procesos como licitaciones públicas. Con él, la aseguradora se compromete a indemnizar al beneficiario de la póliza si el tomador incumple sus obligaciones.</p> 
+                  </div>
+                  <div class="col-50">
+                    <img src="img/inn03.jpg" />
+                  </div>
+                </div>
               </div>
               </div>
             </div>
@@ -592,19 +725,17 @@
         ========================================================================== --> 
         <div id="seccion4" class="seccion4">
           <div class="HScrollContainer">
-            <div class="Hpanel tituloSeccion"><h2>Compromiso Social</h2></div>
+            <div class="Hpanel tituloSeccion"><h2>Compromiso social</h2></div>
             <div class="Hpanel portadaSeccion"><h3 class="quote">«Sueña en grande y no te dejes desanimar por nada ni nadie. Relaciónate y colabora. Comparte tu pasión y escucha las historias de los otros». —Catharina Bruns</h3></div>
           </div>
           <div class="VScrollContainer">
             <div class="Vpanel">
               <div class="VpanelIzquierda">
-                <h3>Compromiso Social</h3>
+                <h3>Compromiso social</h3>
               </div>
               <div class="VpanelDerecha">
                 <div class="VSlide">
                   <h2 class="red">Nuestro equipo</h2>
-                </div>
-                <div class="VSlide">
                   <div class="cardsContainer cardsContainerH">
                     <div class="card">
                       <div class="iconContainer">
@@ -623,21 +754,24 @@
                   </div>
                 </div>
                 <div class="VSlide">
-                  <p class="bigText">Estamos por la conciliación de la vida profesional y personal con medidas como la reducción de jornada por cuidado de hijos, el horario intensivo para un importante número de empleados y ayudas económicas para personas con hijos.</p>
+                  <p class="parrafo-destacado">Estamos por la <b>conciliación de la vida profesional y personal</b> con medidas como la <b>reducción de jornada</b> por cuidado de hijos, el <b>horario intensivo</b> para un importante número de empleados y <b>ayudas económicas</b> para personas con hijos.</p>
                 </div>
                 <div class="VSlide">
                   <div class="cardsContainer cardsContainerH">
                     <div class="card">
+                        <dotlottie-player src="animations/grafica-animada.json" background="transparent" speed="1" style="width: 140px; height: 140px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
                       <h4><span class="animCounter">94.82</span>%</h4>
                       <p class="smallText">de nuestros trabajadores se encuentra en situación de <strong>contrato indefinido</strong></p>
                     </div>
                     <div class="card">
+                      <dotlottie-player src="animations/grafica-animada.json" background="transparent" speed="1" style="width: 140px; height: 140px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
                       <h4><span class="animCounter">11.68</span>%</h4>
                       <p class="smallText">de nuestra plantilla realiza funciones <strong>comerciales</strong></p>
                     </div>
                   </div>
                   <div class="cardsContainer cardsContainerH">
                     <div class="card">
+                      <dotlottie-player src="animations/grafica-animada.json" background="transparent" speed="1" style="width: 140px; height: 140px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
                       <h4><span class="animCounter">88.32</span>%</h4>
                       <p class="smallText">lleva a cabo una labor <strong>administrativa</strong></p>
                     </div>
@@ -649,11 +783,7 @@
                 </div>
                 <div class="VSlide">
                   <h2 class="red">Mediadores</h2>
-                </div>
-                <div class="VSlide">
                   <p class="bigText">El mediador es un pieza clave en nuestro objetivo de garantizar un trato personalizado y experto y un servicio excelente a nuestros clientes.</p>
-                </div>
-                <div class="VSlide"> 
                   <div class="cardsContainer cardsContainerH">
                       <div class="iconCardContainer">
                         <div class="card">
@@ -686,45 +816,45 @@
                 </div>
                 <div class="VSlide">
                   <h2 class="red">FIATC en la sociedad</h2>
-                </div>
-                <div class="VSlide">
                   <p class="bigText">En 2022 apoyamos a diversas entidades con una importante labor social en ámbitos como la cultura, la educación y la salud.</p>
-                </div>
-                <div class="VSlide">
                   <div class="cardsContainer">
-                  <div class="card textAlignLeft">
-                    <p class="bigText"><b>Entidades vinculadas a la salud, la investigación y divulgación</b></p>
-                      <ul>
-                        <li>Fundació La Marató de TV3</li>
-                        <li>Fundació Pasqual Maragall</li>
-                        <li>Hospital Sant Joan de Déu</li>
-                        <li>Fundación Tutelar FECLEM</li>
-                        <li>Fundació Privada Anne</li>
+                  <div class="cardText">
+                    <h3 class="bigText"><b>Entidades vinculadas a la salud, la investigación y divulgación</b></h3>
+                      <ul class="logosContainer">
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundació La Marató de TV3</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundació Pasqual Maragall</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Hospital Sant Joan de Déu</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundación Tutelar FECLEM</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundació Privada Anne</li>
                       </ul>
                   </div>
-                  <div class="card textAlignLeft">
-                    <p class="bigText"><b>Entidades sociales y deportivas</b></p>
-                      <ul>
-                        <li>Fundación Mensajeros de la Paz</li>
-                        <li>Fundación Las Claves de la Felicidad</li>
-                        <li>Fundación Española Deporte Seguro (FEDS)</li>
-                        <li>Fundación Somni dels Nens</li>
-                        <li>Banc dels Aliments</li>
-                        <li>Cruz Roja</li>  
-                    </ul>
-                
+                  <div class="cardText">
+                    <h3 class="bigText"><b>Entidades sociales y deportivas</b></h3>
+                      <ul class="logosContainer">
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundación Mensajeros de la Paz</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundación Las Claves de la Felicidad</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundación Española Deporte Seguro (FEDS)</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundación Somni dels Nens</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Banc dels Aliments</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Cruz Roja</li>
+                      </ul>
                   </div>
-                  <div class="card textAlignLeft">
-                    <p class="bigText"><b>Entidades culturales y educativas</b></p>
-                      <ul>
-                        <li>Escola Pia de Sarrià</li>
-                        <li>Fundación Abadia de Montserrat</li>
-                        <li>Fundació Privada Catalana per l’Arqueologia Ibèrica</li>
-                        <li>Fundació Gran Teatre del Liceu</li>
-                        <li>Cinemanet</li>
-                    </ul>  
+                  <div class="cardText">
+                    <h3 class="bigText"><b>Entidades culturales y educativas</b></h3>
+                      <ul class="logosContainer">
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Escola Pia de Sarrià</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundación Abadia de Montserrat</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundació Privada Catalana per l’Arqueologia Ibèrica</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Fundació Gran Teatre del Liceu</li>
+                        <li><img width="200" src="img/logo-placeholder-image.png"/>Cinemanet</li>
+                      </ul>
                   </div>
                 </div>
+                </div>
+                <div class="VSlide">
+                  <img class="imgHeader" src="img/sostenibilidad.jpg" />
+                  <h2 class="red">Medio Ambiente</h2>
+                  <p class="bigText">Nuestro impacto ambiental positivo por recuperación de residuos de papel y cartón crece cada año en cuanto a toneladas recuperadas, árboles no talados, ahorro de agua, de energía y emisión de CO2 evitada.</p>
                 </div>
               </div>
             </div>
