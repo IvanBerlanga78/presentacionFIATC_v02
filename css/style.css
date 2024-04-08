@@ -616,6 +616,25 @@ svg {
 .cardText h3 {
   padding-bottom: 3rem;
 }
+.grafica-barras {
+  width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.grafica-barras .barra {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -100%;
+}
+.grafica-barras .barra-exterior { 
+  background-color: #17375e;
+}
+.grafica-barras .barra-interior { 
+  background-color:var(--main-blue-color);
+  z-index: 2;
+}
 @media (min-width:800px) {
   .mobile {
     display: none;

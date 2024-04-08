@@ -273,4 +273,22 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
     })
   })
 
+  const graficaBarra1BarraExterior = document.querySelector(".grafica-barras.contrato-indefinido .barra-exterior");
+  const graficaBarra1BarraInterior = document.querySelector(".grafica-barras.contrato-indefinido .barra-interior");
+  gsap.timeline({repeat: -1, repeatDelay: 1})
+.to(graficaBarra1BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
+.to(graficaBarra1BarraInterior,{yPercent:-90 ,transformOrigin:"bottom bottom",duration:2})
 
+
+const graficaBarra2BarraExterior = document.querySelector(".grafica-barras.plantilla .barra-exterior");
+const graficaBarra2BarraInterior = document.querySelector(".grafica-barras.plantilla .barra-interior");
+gsap.timeline({repeat: -1, repeatDelay: 1})
+.to(graficaBarra2BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
+.to(graficaBarra2BarraInterior,{yPercent:-11 ,transformOrigin:"bottom bottom",duration:2})
+
+
+const graficaBarra3BarraExterior = document.querySelector(".grafica-barras.labor .barra-exterior");
+const graficaBarra3BarraInterior = document.querySelector(".grafica-barras.labor .barra-interior");
+gsap.timeline({repeat: -1, repeatDelay: 1})
+.to(graficaBarra3BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
+.to(graficaBarra3BarraInterior,{yPercent:-80 ,transformOrigin:"bottom bottom",duration:2})
