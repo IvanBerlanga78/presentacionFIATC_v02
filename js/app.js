@@ -106,7 +106,6 @@ const graph1Ani = gsap.timeline({paused:true})
       trigger:".primas-container",
       animation:graph2Ani,
       pin:true,
-      markers:true,
       scrub:true,
       start:"10% 10%",
       end:"60% 40%",
