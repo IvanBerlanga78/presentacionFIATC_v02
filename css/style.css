@@ -121,19 +121,19 @@ footer {
   display: flex;
   align-items: center;
 }
-footer .archivoInformes {
+.archivoInformes {
   position: relative;
   min-width: 260px;
   height: 50px;
 }
-footer .archivoInformes .btnPrincipal img {
+.archivoInformes .btnPrincipal img {
   width: 32px;
 }
-footer .archivoInformes .btnPrincipal:hover{
+.archivoInformes .btnPrincipal:hover{
   background: #fff;
   color: #333;
 }
-footer .archivoInformes .btn {
+.archivoInformes .btn {
   color: #fff;
   text-decoration: none;
   position: absolute;
@@ -146,10 +146,10 @@ footer .archivoInformes .btn {
   font-size: 16px;
   transition: all 0.3s linear;
 }
-footer .archivoInformes .btn {
+.archivoInformes .btn {
   background-color: #3c3c3c;
 }
-footer .archivoInformes .btnSecundario {
+.archivoInformes .btnSecundario {
   transition: all 0.3s linear;
   background: #E9E9E9;
   color: #808080;
@@ -158,22 +158,22 @@ footer .archivoInformes .btnSecundario {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-footer .archivoInformes .btnSecundario svg {
+.archivoInformes .btnSecundario svg {
   display: block;
     width: 24px;
     height: 24px;
 }
-footer .archivoInformes .btnSecundario:hover {
+.archivoInformes .btnSecundario:hover {
   color: #fff;
   background-color: #3462A2;
 }
-footer .archivoInformes .btnSecundario:hover  svg path {
+.archivoInformes .btnSecundario:hover  svg path {
   fill:#fff;
 }
-footer .archivoInformes .btnSecundario2022.active{
+.archivoInformes .btnSecundario2022.active{
   transform:translateY(-50px);
 }
-footer .archivoInformes .btnSecundario2023.active{
+.archivoInformes .btnSecundario2023.active{
   transform:translateY(-100px);
 }
 footer .linksDescargaContainer {
@@ -319,7 +319,6 @@ footer .menu a, footer .menu .derechos{
 .linksDescargaContainer {
   display: flex;
   column-gap: 2rem;
-  margin-left: auto;
 }
 .linkDescarga svg{
   width: 35px;
@@ -339,7 +338,10 @@ footer .menu a, footer .menu .derechos{
   background: #fff;
   color: #222;
 }
-
+.seccion5 .linksDescargaContainer {
+  flex-direction: column;
+  row-gap: 2rem;
+}
 .Vpanel {
   flex-direction: row;
   width: 100%;
@@ -586,10 +588,11 @@ svg {
 .parrafo-destacado {
   max-width: 500px;
     text-align: left;
-    padding-left: 2rem;
+    padding-left: 1.7rem;
     border-left: 5px solid var(--main-blue-color);
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 21px;
+    line-height: 27px;
+  color: var(--main-blue-color);
 }
 .parrafo-destacado b { 
   color: var(--main-blue-color);
@@ -635,12 +638,56 @@ svg {
   background-color:var(--main-blue-color);
   z-index: 2;
 }
-@media (min-width:800px) {
+.seccion5 {
+  height: 100vh;
+  background-color:var(--secondary-blue-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+.seccion5 .containerLinks {
+  background-color: #aed9ff;
+  padding: 2.3rem;
+}
+.seccion5 .containerLinks img {
+  padding-bottom: 0.6rem;
+}
+.seccion5 ul li { 
+  list-style-type: none;
+  padding-bottom: 0.6rem;
+}
+.seccion5 ul li a{ 
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+}
+.seccion5 ul ul {
+  padding-left: 1rem;
+}
+.seccion5 ul ul li {
+  list-style-type: disc;
+}
+
+@media (max-width:1100px) {
+  footer {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  footer .menu {
+    align-items: center;
+  }
+  footer .linksDescargaContainer {
+    margin-left: 0;
+  }
+}
+
+@media (min-width:1100px) {
   .mobile {
     display: none;
   }
 }
-@media  (max-width:800px) {
+@media  (max-width:1100px) {
   .desktop {
     display: none;
   }
@@ -714,6 +761,9 @@ svg {
   }
   .portada, .intro {
     padding: 2rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
   }
   h2 {
     font-size:3rem;
@@ -774,6 +824,23 @@ svg {
   .cardText .logos-wrapper{
     flex-direction: column;
     align-items: center;
+  }
+  .mobile-menu-bar {
+    z-index: 99;
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    padding: 1rem;
+  }
+  .container-text {
+    flex-direction: column-reverse;
+    row-gap: 2rem;
+  }
+  .container-text .col-50 {
+    width: 100%;
+  }
+  .card, .iconCardContainer {
+    min-width: 100%;
   }
 }
 

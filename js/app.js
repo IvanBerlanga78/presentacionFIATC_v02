@@ -3,18 +3,7 @@ addEventListener("DOMContentLoaded", (event) => {
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
-const mainHeadingAnim  = gsap.timeline({paused:true})
 
-.to(".intro h2 .line1", {x:90}, "<")
-.to(".intro h2 .line2", {x:-90}, "<")
-
-  ScrollTrigger.create({
-    trigger:".intro",
-    start:"top 30%",
-    end:"bottom 80%",
-    animation:mainHeadingAnim,
-    scrub:true
-  })
 
 const animIntro2 = gsap.timeline()
 .from(".portada2 p",{opacity:0, x:100})
@@ -106,9 +95,9 @@ const graph1Ani = gsap.timeline({paused:true})
       trigger:".primas-container",
       animation:graph2Ani,
       pin:true,
-      scrub:true,
-      start:"10% 10%",
-      end:"60% 40%",
+      scrub:1,
+      start:"10% 20%",
+      end:"60% 60%",
   
     })
 
@@ -214,7 +203,21 @@ gsap.utils.toArray(".animCounter").forEach(box => {
 let mm = gsap.matchMedia();
 
 // add a media query. When it matches, the associated function will run
-mm.add("(min-width: 800px)", () => {
+mm.add("(min-width: 1100px)", () => {
+
+  const mainHeadingAnim  = gsap.timeline({paused:true})
+
+  .to(".intro h2 .line1", {x:90}, "<")
+  .to(".intro h2 .line2", {x:-90}, "<")
+  
+    ScrollTrigger.create({
+      trigger:".intro",
+      start:"top 30%",
+      end:"bottom 80%",
+      animation:mainHeadingAnim,
+      scrub:true
+    })
+
 
 let VScrollContainer = gsap.utils.toArray(".VScrollContainer");
 let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
@@ -249,7 +252,6 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
       trigger:VScrollContainerItem,
       start:"top top",
       end:"bottom bottom",
-      //animation:tween,
       scrub:true,
       pin: sidebar[index]
     })
@@ -292,3 +294,61 @@ const graficaBarra3BarraInterior = document.querySelector(".grafica-barras.labor
 gsap.timeline({repeat: -1, repeatDelay: 1})
 .to(graficaBarra3BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
 .to(graficaBarra3BarraInterior,{yPercent:-80 ,transformOrigin:"bottom bottom",duration:2})
+
+
+
+const containerTexts = gsap.utils.toArray(".container-text")
+
+
+
+containerTexts.forEach(containerText => {
+
+  const titulo = containerText.querySelector("h3");
+  const imagen = containerText.querySelector("img");
+  const parrafos = containerText.querySelectorAll("p");
+
+  gsap.set(titulo, { opacity: 0, transformOrigin: "50% 50%" });
+  gsap.set(imagen, { opacity: 0, transformOrigin: "50% 50%" });
+  gsap.set(parrafos, { opacity: 0, transformOrigin: "50% 50%" });
+
+  gsap.timeline()  
+ .to(titulo, {
+    opacity: 1,
+    ease: "none",
+    duration:1,
+    scrollTrigger: {
+      trigger: containerText,
+      start: "40% 60%",
+      end: "90% 70%",
+      scrub: 1
+    }
+  })
+
+  .to(imagen, {
+    opacity: 1,
+    ease: "none",
+    duration:1,
+    scrollTrigger: {
+      trigger: containerText,
+      start: "40% 60%",
+      end: "90% 70%",
+      scrub: 1
+    }
+  })
+
+  
+    gsap.to(parrafos, {
+      opacity: 1,
+      y:5,
+      ease: "none",
+      duration:1,
+      stagger:0.3,
+      scrollTrigger: {
+        trigger: containerText,
+        start: "40% 60%",
+        end: "90% 70%",
+        scrub: 1
+      }
+
+  })
+})
