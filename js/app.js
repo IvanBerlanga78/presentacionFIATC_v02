@@ -4,7 +4,6 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
 
-
 const animIntro2 = gsap.timeline()
 .from(".portada2 p",{opacity:0, x:100})
 
@@ -47,21 +46,20 @@ ScrollTrigger.create({
 })
 
 
-/*
+
 const graficaFondo = document.querySelector("#cartera-negocio #fondo");
 const graficaAno = document.querySelector("#cartera-negocio #año");
-const dataVida = document.getElementById("vida");
-const dataVidaTxt = document.getElementById("vida-txt");
-const dataSalud = document.getElementById("salud");
-const dataSaludTxt = document.getElementById("salud-txt");
-const dataAutos = document.getElementById("autos");
-const dataAutosTxt = document.getElementById("autos-txt");
-const dataMultirriesgos = document.getElementById("multirriesgos");
-const dataMultirriesgosTxt = document.getElementById("multirriesgos-txt");
-const dataDiversos = document.getElementById("diversos");
-const dataDiversosTxt = document.getElementById("diversos-txt");
-const grafica1 = document.getElementById("cartera-negocio");
-const graficaContainer = document.querySelector(".cartera-negocio-container");
+const dataVida = document.querySelector("#cartera-negocio #vida");
+const dataVidaTxt = document.querySelector("#cartera-negocio #vida-txt");
+const dataSalud = document.querySelector("#cartera-negocio #salud");
+const dataSaludTxt = document.querySelector("#cartera-negocio #salud-txt");
+const dataAutos = document.querySelector("#cartera-negocio #autos");
+const dataAutosTxt = document.querySelector("#cartera-negocio #autos-txt");
+const dataMultirriesgos = document.querySelector("#cartera-negocio #multirriesgos");
+const dataMultirriesgosTxt = document.querySelector("#cartera-negocio #multirriesgos-txt");
+const dataDiversos = document.querySelector("#cartera-negocio #diversos");
+const dataDiversosTxt = document.querySelector("#cartera-negocio #diversos-txt");
+
 const graph1Ani = gsap.timeline({paused:true})
 .from ([graficaFondo, graficaAno], {scale:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
 .from ([dataVida, dataVidaTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
@@ -79,7 +77,7 @@ const graph1Ani = gsap.timeline({paused:true})
     end:"80% 80%",
 
   })
-*/
+
   const graficaPrimasFondo = document.querySelector("#primas-fondo");
   const graficaPrimasAno = document.querySelector("#primas-ano");
   const dataPrimasVida = document.getElementById("primas-vida");
@@ -96,10 +94,17 @@ const graph1Ani = gsap.timeline({paused:true})
       animation:graph2Ani,
       pin:true,
       scrub:1,
-      start:"10% 20%",
-      end:"60% 60%",
+      start:"30% 60%",
+      end:"80% 80%",
   
     })
+
+  document.querySelectorAll(".scrolltotop").forEach((btnlogo, index) => {
+    btnlogo.addEventListener("click", () => {
+      gsap.to(window, {duration: 1, scrollTo:{y:"#portada"}});
+    });
+  });  
+
 
   document.querySelectorAll(".nav .btn1").forEach((btn, index) => {
     btn.addEventListener("click", () => {
@@ -129,37 +134,7 @@ const graph1Ani = gsap.timeline({paused:true})
 
 
 
-gsap.utils.toArray(".animCounter").forEach(box => {
-  var tler =  gsap.from(box, {
-      textContent: "0",
-      duration: 2,
-      ease: "power1.inOut",
-      modifiers: {
-          textContent: value => formatNumber(value, 2)
-      },
-      scrollTrigger: {
-          trigger: box,
-          start: "top 50%",
-          end: "bottom 60%",
-          toggleActions: "play none none reverse"
-      }
-  }); })
 
-  gsap.utils.toArray(".animCounterNoDecimals").forEach(box => {
-    var tler =  gsap.from(box, {
-        textContent: "0",
-        duration: 2,
-        ease: "power1.inOut",
-        modifiers: {
-            textContent: value => formatNumber(value, 0)
-        },
-        scrollTrigger: {
-            trigger: box,
-            start: "top 50%",
-            end: "bottom 60%",
-            toggleActions: "play none none reverse"
-        }
-    }); })
 
   function formatNumber(value, decimals) {
     let s = (+value).toLocaleString('de-DE').split(",");
@@ -259,8 +234,75 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
         }
     }); })
 
+    gsap.utils.toArray(".animCounter").forEach(box => {
+      var tler =  gsap.from(box, {
+          textContent: "0",
+          duration: 2,
+          ease: "power1.inOut",
+          modifiers: {
+              textContent: value => formatNumber(value, 2)
+          },
+          scrollTrigger: {
+              trigger: box,
+              start: "top 50%",
+              end: "bottom 60%",
+              toggleActions: "play none none reverse"
+          }
+      }); })
+    
+      gsap.utils.toArray(".animCounterNoDecimals").forEach(box => {
+        var tler =  gsap.from(box, {
+            textContent: "0",
+            duration: 2,
+            ease: "power1.inOut",
+            modifiers: {
+                textContent: value => formatNumber(value, 0)
+            },
+            scrollTrigger: {
+                trigger: box,
+                start: "top 50%",
+                end: "bottom 60%",
+                toggleActions: "play none none reverse"
+            }
+        }); })
 
-})
+}) //End responsive >1100
+
+mm.add("(max-width: 1100px)", () => {
+
+  gsap.utils.toArray(".animCounter").forEach(box => {
+    var tler =  gsap.from(box, {
+        textContent: "0",
+        duration: 2,
+        ease: "power1.inOut",
+        modifiers: {
+            textContent: value => formatNumber(value, 2)
+        },
+        scrollTrigger: {
+            trigger: box,
+            start: "30% 50%",
+            end: "bottom 60%",
+            toggleActions: "play none none reverse"
+        }
+    }); })
+  
+    gsap.utils.toArray(".animCounterNoDecimals").forEach(box => {
+      var tler =  gsap.from(box, {
+          textContent: "0",
+          duration: 2,
+          ease: "power1.inOut",
+          modifiers: {
+              textContent: value => formatNumber(value, 0)
+          },
+          scrollTrigger: {
+              trigger: box,
+              start: "30% 50%",
+              end: "bottom 60%",
+              toggleActions: "play none none reverse"
+          }
+      }); })
+
+})//End responsive <1100
 
   const mobileButtons = document.querySelectorAll(".mobile-menu .btn") 
   const click= document.querySelector('.lineas');
@@ -316,10 +358,10 @@ containerTexts.forEach(containerText => {
  .to(titulo, {
     opacity: 1,
     ease: "none",
-    duration:1,
+    duration:3,
     scrollTrigger: {
       trigger: containerText,
-      start: "40% 60%",
+      start: "0% 60%",
       end: "90% 70%",
       scrub: 1
     }
@@ -328,10 +370,10 @@ containerTexts.forEach(containerText => {
   .to(imagen, {
     opacity: 1,
     ease: "none",
-    duration:1,
+    duration:2,
     scrollTrigger: {
       trigger: containerText,
-      start: "40% 60%",
+      start: "60% 70%",
       end: "90% 70%",
       scrub: 1
     }
@@ -343,10 +385,10 @@ containerTexts.forEach(containerText => {
       y:5,
       ease: "none",
       duration:1,
-      stagger:0.3,
+      stagger:0.5,
       scrollTrigger: {
         trigger: containerText,
-        start: "40% 60%",
+        start: "50% 60%",
         end: "90% 70%",
         scrub: 1
       }

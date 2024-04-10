@@ -4,10 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -39,7 +38,9 @@
     </div>
   </div>
   <div class="mobile-menu-bar">
-    <img src="img/logo-black.svg" width="150">
+    <a href="#" class="scrolltotop">
+    <img src="img/logo-blue.svg" width="150">
+    </a>
   </div>
   <div class="mobile-menu">
     <div class="nav-mobile">
@@ -66,7 +67,7 @@
        
     </div>
   </div>
-  <div class="portada portada1">
+  <div id="portada" class="portada portada1">
     <div class="content">
       <div class="logoContainer">
         <img src="img/logo.svg" width="200" alt="logo">
@@ -79,9 +80,11 @@
       <source src="videos/pexels_videos_2480792_480.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="main">
+  <div id="main" class="main">
     <nav class="nav">
-      <img src="img/logo.svg" width="150" alt="logo">
+      <a href="#" class="scrolltotop">
+        <img src="img/logo.svg" width="150" alt="logo">
+      </a>
       <ul class="menu">
         <li><a class="btn1" href="#">Información de negocio</a></li>
         <li><a class="btn2" href="#">Clientes</a></li>
@@ -228,80 +231,22 @@
                 <dotlottie-player src="animations/grafica-animada.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
               </div>
               <div class="VSlide primas-container desktop">
-               <?xml version="1.0" encoding="utf-8"?>
-                <!--
-                <svg id="cartera-negocio" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="30 30 290 550" style="enable-background:new 0 0 349.1 349.1;" xml:space="preserve">
-                <style type="text/css">
-                  .st0{fill:#EFEFEF;}
-                  .st1{fill:#B69678;}
-                  .st2{font-family:'Noto Sans';}
-                  .st3{font-size:11px;}
-                  .st4{font-family:'Noto Sans';}
-                  .st5{font-size:18.4106px;}
-                  .st6{fill:#E3BB96;}
-                  .st7{fill:#7F7F7F;}
-                  .st8{fill:#8499B4;}
-                  .st9{fill:#3B6DAC;}
-                  .st10{font-size:25.088px;}
-                </style>
-                <g id="fondo">
-                  <circle class="st0" cx="174.5" cy="174.5" r="97.4"/>
-                </g>
-                <g id="diversos" class="diversos">
-                  <path id="_x34_" class="st1" d="M116.2,106c16.3-13.9,37-21.5,58.3-21.5l0,40c-11.9,0-23.4,4.2-32.4,11.9L116.2,106z"/>
-                </g>
-                <g id="diversos-txt" class="diversos">
-                  <text transform="matrix(1 0 0 1 109.2515 56.7951)"><tspan x="0" y="0" class="st2 st3">Diversos</tspan><tspan x="2.9" y="22.1" class="st4 st5">11%</tspan></text>
-                </g>
-                <g id="multirriesgos" class="multirriesgos">
-                  <path id="_x33_" class="st6" d="M84.6,177.4c-0.9-27.4,10.8-53.7,31.6-71.4l25.9,30.5c-11.6,9.9-18,24.5-17.6,39.7L84.6,177.4z"/>
-                </g>
-                <g id="multirriesgos-txt"  class="multirriesgos">
-                  <text transform="matrix(1 0 0 1 21.1707 121.3989)"><tspan x="0" y="0" class="st2 st3">Multirriesgos</tspan><tspan x="13.6" y="22.1" class="st4 st5">14%</tspan></text>
-                </g>
-                <g id="autos"  class="autos">
-                  <path id="_x32_" class="st7" d="M130.4,253c-27.4-15.4-44.8-44.1-45.8-75.5l40-1.3c0.6,17.5,10.2,33.4,25.4,42L130.4,253z"/>
-                </g>
-                <g id="autos-txt" class="autos">
-                  <text transform="matrix(1 0 0 1 53.9377 236.2119)"><tspan x="0" y="0" class="st2 st3">Autos</tspan><tspan x="-4" y="22.1" class="st4 st5">16%</tspan></text>
-                </g>
-                <g id="salud" class="salud">
-                  <path id="_x31_" class="st8" d="M248.4,226c-26.5,38-77.6,49.7-118,26.9l19.6-34.9c22.4,12.6,50.8,6.2,65.5-15L248.4,226z"/>
-                </g>
-                <g id="salud-txt" class="salud">
-                  <text transform="matrix(1 0 0 1 188.1084 284.3222)"><tspan x="0" y="0" class="st2 st3">Salud</tspan><tspan x="-5.1" y="22.1" class="st4 st5">23%</tspan></text>
-                </g>
-                <g id="vida" class="vida">
-                  <path id="_x30_" class="st9" d="M174.5,84.5c49.7,0,90,40.3,90,90c0,18.4-5.6,36.4-16.2,51.5l-32.8-22.9
-                    c15.8-22.6,10.2-53.8-12.4-69.6c-8.4-5.9-18.4-9-28.6-9V84.5z"/>
-                </g>
-                <g id="vida-txt" class="vida">
-                  <text transform="matrix(1 0 0 1 268.4327 96.3245)"><tspan x="0" y="0" class="st2 st3">Vida</tspan><tspan x="-7.4" y="22.1" class="st4 st5">34%</tspan></text>
-                </g>
-                <g id="año">
-                  <text transform="matrix(1 0 0 1 145.3564 183.9025)" class="st4 st10">2022</text>
-                </g>
-                </svg>
-                -->
-
-
               <svg id="primas" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 349.1 349.1" style="enable-background:new 0 0 349.1 349.1;" xml:space="preserve">
               <style type="text/css">
                 .st0{fill:#EFEFEF;}
-                .st1{fill:#3B6DAC;}
+                .st12{fill:#3B6DAC;}
                 .st3{font-size:11px;}
-                
+                .st41 {fill:#333}
                 .st5{font-size:18.4106px;}
                 .st6{fill:#E3BB96;}
-                .st7{font-size:34.0355px;}
+                .st71{font-size:34.0355px;}
               </style>
               <g id="primas-fondo">
                 <circle class="st0" cx="175.9" cy="170.8" r="132.2"/>
               </g>
               <g id="primas-vida">
-                <path id="_x31__00000172432428768024427170000018277408855775430049_" class="st1" d="M76.5,242.1
+                <path id="_x31__00000172432428768024427170000018277408855775430049_" class="st12" d="M76.5,242.1
                   c-39.3-54.1-27.3-129.9,26.8-169.3c20.7-15,45.6-23.1,71.2-23.2l0,53.9c-37.2,0-67.3,30.2-67.3,67.3c0,14.2,4.5,28.1,12.9,39.6
                   L76.5,242.1z"/>
               </g>
@@ -316,7 +261,7 @@
                 <text transform="matrix(1 0 0 1 11.7435 31.2662)"><tspan x="0" y="0" class="st2 st3">Seguros de vida</tspan><tspan x="7" y="22.1" class="st4 st5">34,11%</tspan></text>
               </g>
               <g id="primas-ano">
-                <text transform="matrix(1 0 0 1 134.9492 187.2431)" class="st4 st7">2022</text>
+                <text transform="matrix(1 0 0 1 134.9492 187.2431)" class="st41 st71">2022</text>
               </g>
               </svg>
 
@@ -331,10 +276,10 @@
                   .mst0{fill:#EFEFEF;}
                   .mst1{fill:#B69678;}
                   .mst2{fill:#FFFFFF;}
-                  .mst3{font-family:'Noto Sans';}
+                  .mst3{font-family:'Inter';}
                   .mst4{font-size:28.7162px;}
                   .mst5{fill:#E3BB96;}
-                  .mst6{font-family:'Noto Sans';}
+                  .mst6{font-family:'Inter';}
                   .mst7{font-size:18.4106px;}
                   .mst8{fill:#7F7F7F;}
                   .mst9{fill:#8499B4;}
@@ -451,7 +396,64 @@
                     </div>
                   </div>
               </div>
-
+              <div class="VSlide desktop">
+                <h2 class="red">Evolución<br>de la cartera de negocios</h2>  
+                <div class="cartera-negocio-container">
+                    <svg id="cartera-negocio" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="20 30 290 550" style="enable-background:new 0 0 349.1 349.1;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#EFEFEF;}
+                    .st1{fill:#B69678;}
+                    .st2{font-family:'Inter';}
+                    .st3{font-size:11px;}
+                    .st4{font-family:'Inter';}
+                    .st5{font-size:18.4106px;}
+                    .st6{fill:#E3BB96;}
+                    .st7{fill:#7F7F7F;}
+                    .st8{fill:#8499B4;}
+                    .st9{fill:#3B6DAC;}
+                    .st10{font-size:25.088px;}
+                  </style>
+                  <g id="fondo">
+                    <circle class="st0" cx="174.5" cy="174.5" r="97.4"/>
+                  </g>
+                  <g id="diversos" class="diversos">
+                    <path id="_x34_" class="st1" d="M116.2,106c16.3-13.9,37-21.5,58.3-21.5l0,40c-11.9,0-23.4,4.2-32.4,11.9L116.2,106z"/>
+                  </g>
+                  <g id="diversos-txt" class="diversos">
+                    <text transform="matrix(1 0 0 1 109.2515 56.7951)"><tspan x="0" y="0" class="st2 st3">Diversos</tspan><tspan x="2.9" y="22.1" class="st4 st5">11%</tspan></text>
+                  </g>
+                  <g id="multirriesgos" class="multirriesgos">
+                    <path id="_x33_" class="st6" d="M84.6,177.4c-0.9-27.4,10.8-53.7,31.6-71.4l25.9,30.5c-11.6,9.9-18,24.5-17.6,39.7L84.6,177.4z"/>
+                  </g>
+                  <g id="multirriesgos-txt"  class="multirriesgos">
+                    <text transform="matrix(1 0 0 1 21.1707 121.3989)"><tspan x="0" y="0" class="st2 st3">Multirriesgos</tspan><tspan x="13.6" y="22.1" class="st4 st5">14%</tspan></text>
+                  </g>
+                  <g id="autos"  class="autos">
+                    <path id="_x32_" class="st7" d="M130.4,253c-27.4-15.4-44.8-44.1-45.8-75.5l40-1.3c0.6,17.5,10.2,33.4,25.4,42L130.4,253z"/>
+                  </g>
+                  <g id="autos-txt" class="autos">
+                    <text transform="matrix(1 0 0 1 53.9377 236.2119)"><tspan x="0" y="0" class="st2 st3">Autos</tspan><tspan x="-4" y="22.1" class="st4 st5">16%</tspan></text>
+                  </g>
+                  <g id="salud" class="salud">
+                    <path id="_x31_" class="st8" d="M248.4,226c-26.5,38-77.6,49.7-118,26.9l19.6-34.9c22.4,12.6,50.8,6.2,65.5-15L248.4,226z"/>
+                  </g>
+                  <g id="salud-txt" class="salud">
+                    <text transform="matrix(1 0 0 1 188.1084 284.3222)"><tspan x="0" y="0" class="st2 st3">Salud</tspan><tspan x="-5.1" y="22.1" class="st4 st5">23%</tspan></text>
+                  </g>
+                  <g id="vida" class="vida">
+                    <path id="_x30_" class="st9" d="M174.5,84.5c49.7,0,90,40.3,90,90c0,18.4-5.6,36.4-16.2,51.5l-32.8-22.9
+                      c15.8-22.6,10.2-53.8-12.4-69.6c-8.4-5.9-18.4-9-28.6-9V84.5z"/>
+                  </g>
+                  <g id="vida-txt" class="vida">
+                    <text transform="matrix(1 0 0 1 268.4327 96.3245)"><tspan x="0" y="0" class="st2 st3">Vida</tspan><tspan x="-7.4" y="22.1" class="st4 st5">34%</tspan></text>
+                  </g>
+                  <g id="año">
+                    <text transform="matrix(1 0 0 1 145.3564 183.9025)" class="st4 st10">2022</text>
+                  </g>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -862,9 +864,9 @@
                 </div>
                 </div>
                 <div class="VSlide">
-                  <dotlottie-player src="animations/green-enviroment.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
                   <h2 class="red">Medio Ambiente</h2>
                   <p class="bigText">Nuestro impacto ambiental positivo por recuperación de residuos de papel y cartón crece cada año en cuanto a toneladas recuperadas, árboles no talados, ahorro de agua, de energía y emisión de CO2 evitada.</p>
+                  <dotlottie-player src="animations/green-enviroment.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
                 </div>
               </div>
             </div>
@@ -876,7 +878,7 @@
         <div id="seccion5" class="seccion5">
          
               <div class="containerLinks">
-                <img src="img/logo-black.svg" width="150" alt="logo">
+                <img src="img/logo-blue.svg" width="150" alt="logo">
                 <ul>
                   <li><a href="#">Descargar Informe completo 2022</a></li>
                   <li><a href="#">Descargar EINF 2022</a></li>

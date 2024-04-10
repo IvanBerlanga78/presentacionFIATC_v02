@@ -19,7 +19,7 @@
    ========================================================================== */
 
   :root {
-    --main-blue-color:rgb(59, 109, 172);
+    --main-blue-color:#3b6dac;
     --secondary-blue-color:rgba(59, 109, 172,0.5);
     --main-gray-color:#222;
     --secondary-gray-color:rgba(98, 97, 97, 0.5);
@@ -37,7 +37,7 @@ ul {
   padding: 0;
 }
   body {
-  font-family: "Noto Sans", sans-serif;
+    font-family: "Inter", sans-serif;
   background-color: white;
   color: white;
   font-size: 18px;
@@ -51,7 +51,7 @@ ul {
   overflow-x: hidden;
 }
 svg, svg tspan {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 h1, h2 {
   font-weight: 700;
@@ -138,7 +138,7 @@ footer {
   text-decoration: none;
   position: absolute;
   display: flex;
-  width: 240px;
+  width: 250px;
   height: 50px;
   padding: 0.4rem 0.8rem;
   align-items: center;
@@ -203,7 +203,7 @@ footer .menu a, footer .menu .derechos{
   top:0px
 }
 .intro {
-  background-color: rgba(59, 109, 172,0.5);
+  background-color: rgba(59, 109, 172,0.7);
 }
 .intro .text p { 
   margin-bottom: 2rem;
@@ -391,7 +391,7 @@ svg {
   height: 100%;
 }
 .grafica {
-  width: 700px;
+  width: 600px;
 }
 .nav .menu li {
   list-style-type: none;
@@ -494,7 +494,7 @@ svg {
   column-gap: 3rem;
 }
 .card {
-  background-color: #c7d9ef;
+  /* background-color: #c7d9ef;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -507,7 +507,7 @@ svg {
   row-gap: 0.5rem;
 }
 .card.BGred {
-  background-color: var(--secondary-red);
+  /* background-color: var(--secondary-red);*/
 }
 .card h4 {
   font-size: 2rem;
@@ -533,7 +533,9 @@ svg {
   flex-direction: column;
   row-gap: 1rem;
 }
-
+.iconCardContainer .card{
+  padding-top: 0rem;
+}
 .cardsContainerGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -570,7 +572,10 @@ svg {
   text-align: left;
 }
 .mobile-menu {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  height: 0;
 }
 .mobile .svg {
   width: 100%;
@@ -590,8 +595,8 @@ svg {
     text-align: left;
     padding-left: 1.7rem;
     border-left: 5px solid var(--main-blue-color);
-    font-size: 21px;
-    line-height: 27px;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
   color: var(--main-blue-color);
 }
 .parrafo-destacado b { 
@@ -732,6 +737,9 @@ svg {
     padding: 1rem;
     width: 100%;
     row-gap: 2rem;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
   }
 
   .lineas{
@@ -742,7 +750,7 @@ svg {
   }
   
   .lineas span{
-    background-color:#222;
+    background-color:var(--main-blue-color);
     width:2em;
     height:.2em;
     margin:0.26em 0;
@@ -750,9 +758,11 @@ svg {
     transition: all .4s ease;
     transform-origin:0 0;
   }
-  
+  .lineas-plegado span {
+    background-color:#fff;
+  }
   .lineas-plegado span:nth-child(1) {
-    transform: rotate(45deg) translate(1px, -1px);
+    transform: rotate(45deg) translate(3px, -2px);
   }
   
   .lineas-plegado span:nth-child(2) {
@@ -813,16 +823,22 @@ svg {
     flex-direction: column;
     row-gap: 4rem;
   }
+  .footer-mobile {
+    position: relative;
+  }
   .footer-mobile, .footer-mobile .menu {
     display: flex;
     flex-direction: column;
   }
   .footer-mobile .menu {
-    row-gap: 0.5rem;
+    row-gap: 0.3rem;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 2rem;
   }
   .footer-mobile .menu, .footer-mobile .menu a{
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-decoration: none;
   }
 
@@ -830,7 +846,7 @@ svg {
     display: flex;
     flex-direction: column;
     margin-left: 0;
-    row-gap: 0.2rem;
+    row-gap: 0.5rem;
   }
   .mobile-menu .linksDescargaContainer .linkDescarga  { 
     padding: 0;
