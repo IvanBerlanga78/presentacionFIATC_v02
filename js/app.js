@@ -127,20 +127,7 @@ const graph1Ani = gsap.timeline({paused:true})
  
 });
 
-gsap.utils.toArray(".animNumber").forEach(number => {
-  var tler =  gsap.to(number, {
-      scale:1.1,
-      duration:1,
-      ease:"back",
-      pin:true,
-      scrollTrigger: {
-          trigger: number,
-          start: "top 50%",
-          end: "bottom 60%",
-          toggleActions: "play none none reverse"
-         
-      }
-  }); })
+
 
 gsap.utils.toArray(".animCounter").forEach(box => {
   var tler =  gsap.from(box, {
@@ -257,6 +244,20 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
     })
   });
 
+  gsap.utils.toArray(".animNumber").forEach(number => {
+    var tler =  gsap.to(number, {
+        scale:1.1,
+        duration:1,
+        ease:"back",
+        pin:true,
+        scrollTrigger: {
+            trigger: number,
+            start: "top 50%",
+            end: "bottom 60%",
+            toggleActions: "play none none reverse"
+           
+        }
+    }); })
 
 
 })
