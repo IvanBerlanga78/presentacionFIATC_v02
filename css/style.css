@@ -507,7 +507,7 @@ svg {
   row-gap: 0.5rem;
 }
 .card.BGred {
-  /* background-color: var(--secondary-red);*/
+  background-color: var(--secondary-red);
 }
 .card h4 {
   font-size: 2rem;
@@ -525,7 +525,7 @@ svg {
   padding-bottom: 0.4rem;
 }
 .spacer {
-  height: 40rem;
+  height: 20rem;
 }
 .iconCardContainer {
   display: flex;
@@ -751,9 +751,9 @@ svg {
   
   .lineas span{
     background-color:var(--main-blue-color);
-    width:2em;
+    width:1.7em;
     height:.2em;
-    margin:0.26em 0;
+    margin:0.2em 0;
     display:block;
     transition: all .4s ease;
     transform-origin:0 0;
@@ -762,7 +762,7 @@ svg {
     background-color:#fff;
   }
   .lineas-plegado span:nth-child(1) {
-    transform: rotate(45deg) translate(3px, -2px);
+    transform: rotate(45deg) translate(1px, -2px);
   }
   
   .lineas-plegado span:nth-child(2) {

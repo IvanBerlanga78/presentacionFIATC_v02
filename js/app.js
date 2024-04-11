@@ -47,26 +47,44 @@ ScrollTrigger.create({
 
 
 
-const graficaFondo = document.querySelector("#cartera-negocio #fondo");
-const graficaAno = document.querySelector("#cartera-negocio #año");
-const dataVida = document.querySelector("#cartera-negocio #vida");
-const dataVidaTxt = document.querySelector("#cartera-negocio #vida-txt");
-const dataSalud = document.querySelector("#cartera-negocio #salud");
-const dataSaludTxt = document.querySelector("#cartera-negocio #salud-txt");
-const dataAutos = document.querySelector("#cartera-negocio #autos");
-const dataAutosTxt = document.querySelector("#cartera-negocio #autos-txt");
-const dataMultirriesgos = document.querySelector("#cartera-negocio #multirriesgos");
-const dataMultirriesgosTxt = document.querySelector("#cartera-negocio #multirriesgos-txt");
-const dataDiversos = document.querySelector("#cartera-negocio #diversos");
-const dataDiversosTxt = document.querySelector("#cartera-negocio #diversos-txt");
+const grafica1Fondo = document.querySelector("#cartera-negocio #G1-fondo");
+const grafica2Fondo = document.querySelector("#cartera-negocio #G2-fondo");
+const grafica1Ano = document.querySelector("#cartera-negocio #G1-ano");
+const grafica2Ano = document.querySelector("#cartera-negocio #G2-ano");
+const grafica1dataVida = document.querySelector("#cartera-negocio #G1-vida");
+const grafica2dataVida = document.querySelector("#cartera-negocio #G2-vida");
+const grafica1dataVidaTxt = document.querySelector("#cartera-negocio #G1-vida-txt");
+const grafica2dataVidaTxt = document.querySelector("#cartera-negocio #G2-vida-txt");
+const grafica1dataSalud = document.querySelector("#cartera-negocio #G1-salud");
+const grafica2dataSalud = document.querySelector("#cartera-negocio #G2-salud");
+const grafica1dataSaludTxt = document.querySelector("#cartera-negocio #G1-salud-txt");
+const grafica2dataSaludTxt = document.querySelector("#cartera-negocio #G2-salud-txt");
+const grafica1dataAutos = document.querySelector("#cartera-negocio #G1-autos");
+const grafica2dataAutos = document.querySelector("#cartera-negocio #G2-autos");
+const grafica1dataAutosTxt = document.querySelector("#cartera-negocio #G1-autos-txt");
+const grafica2dataAutosTxt = document.querySelector("#cartera-negocio #G2-autos-txt");
+const grafica1dataMultirriesgos = document.querySelector("#cartera-negocio #G1-multirriesgos");
+const grafica2dataMultirriesgos = document.querySelector("#cartera-negocio #G2-multirriesgos");
+const grafica1dataMultirriesgosTxt = document.querySelector("#cartera-negocio #G1-multirriesgos-txt");
+const grafica2dataMultirriesgosTxt = document.querySelector("#cartera-negocio #G2-multirriesgos-txt");
+const grafica1dataDiversos = document.querySelector("#cartera-negocio #G1-diversos");
+const grafica2dataDiversos = document.querySelector("#cartera-negocio #G2-diversos");
+const grafica1dataDiversosTxt = document.querySelector("#cartera-negocio #G1-diversos-txt");
+const grafica2dataDiversosTxt = document.querySelector("#cartera-negocio #G2-diversos-txt");
 
 const graph1Ani = gsap.timeline({paused:true})
-.from ([graficaFondo, graficaAno], {scale:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataVida, dataVidaTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataSalud, dataSaludTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataAutos, dataAutosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataMultirriesgos, dataMultirriesgosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
-.from ([dataDiversos, dataDiversosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1Fondo, grafica2Fondo], {scale:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1Ano, grafica2Ano], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataVida, grafica2dataVida], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataVidaTxt, grafica2dataVidaTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataSalud, grafica2dataSalud], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataSaludTxt, grafica2dataSaludTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataAutos, grafica2dataAutos], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataAutosTxt, grafica2dataAutosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataMultirriesgos, grafica2dataMultirriesgos], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataMultirriesgosTxt, grafica2dataMultirriesgosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataDiversos, grafica2dataDiversos], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
+.from ([grafica1dataDiversosTxt, grafica2dataDiversosTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
 
   ScrollTrigger.create({
     trigger:".cartera-negocio-container",
@@ -74,16 +92,15 @@ const graph1Ani = gsap.timeline({paused:true})
     pin:true,
     scrub:1,
     start:"30% 60%",
-    end:"80% 80%",
-
+    end:"80% 100%",
   })
 
-  const graficaPrimasFondo = document.querySelector("#primas-fondo");
-  const graficaPrimasAno = document.querySelector("#primas-ano");
-  const dataPrimasVida = document.getElementById("primas-vida");
-  const dataPrimasVidaTxt = document.getElementById("primas-vida-txt");
-  const dataPrimasNoVida = document.getElementById("primas-no-vida");
-  const dataPrimasNoVidaTxt = document.getElementById("primas-no-vida-txt");
+  const graficaPrimasFondo = document.querySelector("#primas #fondo");
+  const graficaPrimasAno = document.querySelector("#primas #año");
+  const dataPrimasVida = document.querySelector("#primas #vida");
+  const dataPrimasVidaTxt = document.querySelector("#primas #vida-txt");
+  const dataPrimasNoVida = document.querySelector("#primas #no-vida");
+  const dataPrimasNoVidaTxt = document.querySelector("#primas #no-vida-txt");
   const graph2Ani = gsap.timeline({paused:true})
   .from ([graficaPrimasFondo, graficaPrimasAno], {scale:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
   .from ([dataPrimasVida, dataPrimasVidaTxt], {opacity:0, ease:Back, transformOrigin:"50% 50%", stagger:0.1})
