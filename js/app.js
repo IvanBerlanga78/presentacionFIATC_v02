@@ -16,6 +16,12 @@ ScrollTrigger.create({
   scrub:1
 })
 
+const mouse = document.querySelector(".portada svg")
+
+
+gsap.to(mouse, {y:20, repeat:-1, yoyo:true, ease: Power2.easeInOut})
+
+
 const btnArchivo = document.querySelector(".archivoInformes")
 
 btnArchivo.addEventListener("click", function(event){
@@ -90,9 +96,9 @@ const graph1Ani = gsap.timeline({paused:true})
     trigger:".cartera-negocio-container",
     animation:graph1Ani,
     pin:true,
-    scrub:1,
-    start:"30% 60%",
-    end:"80% 100%",
+    scrub:3,
+    start:"30% 40%",
+    end:"100% 50%",
   })
 
   const graficaPrimasFondo = document.querySelector("#primas #fondo");
@@ -111,8 +117,8 @@ const graph1Ani = gsap.timeline({paused:true})
       animation:graph2Ani,
       pin:true,
       scrub:1,
-      start:"30% 60%",
-      end:"80% 80%",
+      start:"30% 40%",
+      end:"100% 60%",
   
     })
 
@@ -242,12 +248,12 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
         duration:1,
         ease:"back",
         pin:true,
+        markers:true,
         scrollTrigger: {
             trigger: number,
             start: "top 50%",
             end: "bottom 60%",
-            toggleActions: "play none none reverse"
-           
+            toggleActions: "play none none none" 
         }
     }); })
 
@@ -261,9 +267,9 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
           },
           scrollTrigger: {
               trigger: box,
-              start: "top 50%",
-              end: "bottom 60%",
-              toggleActions: "play none none reverse"
+              start: "top 90%",
+              end: "bottom 100%",
+              toggleActions: "play none none none"
           }
       }); })
     
@@ -277,9 +283,9 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
             },
             scrollTrigger: {
                 trigger: box,
-                start: "top 50%",
-                end: "bottom 60%",
-                toggleActions: "play none none reverse"
+                start: "top 90%",
+                end: "bottom 100%",
+                toggleActions: "play none none none"
             }
         }); })
 
@@ -412,3 +418,32 @@ containerTexts.forEach(containerText => {
 
   })
 })
+
+const card = document.querySelector(".portada .content");
+const motionMatchMedia = window.matchMedia("(prefers-reduced-motion)");
+const THRESHOLD = 15;
+
+/*
+ * Read the blog post here:
+ * https://letsbuildui.dev/articles/a-3d-hover-effect-using-css-transforms
+ */
+function handleHover(e) {
+  const { clientX, clientY, currentTarget } = e;
+  const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
+
+  const horizontal = (clientX - offsetLeft) / clientWidth;
+  const vertical = (clientY - offsetTop) / clientHeight;
+  const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+  const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+
+  card.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+}
+
+function resetStyles(e) {
+  card.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+}
+
+if (!motionMatchMedia.matches) {
+  card.addEventListener("mousemove", handleHover);
+  card.addEventListener("mouseleave", resetStyles);
+}

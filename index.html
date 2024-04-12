@@ -11,7 +11,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="/node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+
+  
   
   <meta name="description" content="">
 
@@ -69,9 +71,24 @@
   <div id="portada" class="portada portada1">
     <div class="content">
       <div class="logoContainer">
-        <img src="img/logo.svg" width="200" alt="logo">
+        <img src="img/logo.svg" width="280" alt="logo">
       </div>
-      <h1>Informe<br> Anual<br> 2023</h1>
+      <h1>Informe Anual<br> 2023</h1>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 90 112.5" style="enable-background:new 0 0 90 112.5;" xml:space="preserve">
+        <style type="text/css">
+          .st0{fill:#FFFFFF;}
+        </style>
+        <circle class="st0" cx="45" cy="19" r="3.5"/>
+        <path class="st0" d="M45,4.4c-9.7,0-17.5,7.8-17.5,17.5V51c0,9.7,7.8,17.5,17.5,17.5S62.5,60.7,62.5,51V21.9
+          C62.5,12.2,54.7,4.4,45,4.4z M60.2,51c0,8.4-6.8,15.2-15.2,15.2S29.8,59.4,29.8,51V21.9c0-8.4,6.8-15.2,15.2-15.2
+          s15.2,6.8,15.2,15.2V51z"/>
+        <path class="st0" d="M60.5,73.5L45,89L29.5,73.5c-0.5-0.5-1.2-0.5-1.6,0c-0.5,0.5-0.5,1.2,0,1.6l16.3,16.3c0.2,0.2,0.5,0.3,0.8,0.3
+          c0.3,0,0.6-0.1,0.8-0.3l16.3-16.3c0.5-0.5,0.5-1.2,0-1.6S60.9,73,60.5,73.5z"/>
+        <path class="st0" d="M60.5,89.8L45,105.3L29.5,89.8c-0.5-0.5-1.2-0.5-1.6,0c-0.5,0.5-0.5,1.2,0,1.6l16.3,16.3
+          c0.2,0.2,0.5,0.3,0.8,0.3c0.3,0,0.6-0.1,0.8-0.3l16.3-16.3c0.5-0.5,0.5-1.2,0-1.6C61.7,89.4,60.9,89.4,60.5,89.8z"/>
+        </svg>
+   
     </div>
 
     <div class="color-overlay"></div>
@@ -177,8 +194,8 @@
             </div>
             <div class="VpanelDerecha">
               <div class="VSlide">
-                <h2 class="red">Hechos relevantes<br> del ejercicio 2022</h2> 
-                <h2>Volumen de negocio<br><span class="animNumber">806.979.509,76€</span></h2>
+                <h2 class="red">Hechos relevantes del ejercicio 2022</h2> 
+                <h2>Volumen de negocio<br><span class="animNumber colorBlue">806.979.509,76€</span></h2>
                 <p class="bigText">Nos encontramos entre las 20 primeras entidades de seguros y somos la segunda mutua del Estado.</p>
                 <div class="cardsContainer cardsContainerH">
                   <div class="card">
@@ -208,13 +225,13 @@
                 </div>
                   <div class="cardsContainer cardsContainerH">
                     <div class="card BGred">
-                      <div class="iconContainer">
+                      <div class="iconContainer bgRed">
                         <img width="100" src="img/iconos-summit.svg"/>
                       </div>
                       <p>Cesión de la cartera de salud de Murimary adquisición de posición mayoritaria en IPRESA</p>
                     </div>   
                   <div class="card BGred">
-                    <div class="iconContainer">
+                    <div class="iconContainer bgRed">
                       <img width="100" src="img/iconos-summit.svg"/>
                     </div>
                     <p>Obtención de la autorización para operar en el ramo de Caución y comercialización de las primeras pólizas.</p>
@@ -225,37 +242,42 @@
               <div class="VSlide">
                 <h2 class="red">Primas</h2>
                 <h2>Volumen de negocio<br><span class="animCounter">806979509.76</span>€</h2>
+                <lottie-player
+                autoplay
+                loop
+                mode="normal"
+                src="/animations/grafica-animada.json"
+                style="width: 320px; height: 320px;"
+              >
+              </lottie-player>
                 <p class="bigText">Crecimiento del <strong>4,41 %</strong> respecto al ejercicio anterior.</p>
                 <p>El volumen de negocio de Andorra fue de <strong>3.528.691,44 euros</strong> con un crecimiento del 5,03 %.</p>
-                <dotlottie-player src="animations/grafica-animada.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
-              </div>
               <div class="VSlide primas-container desktop">
-                <?xml version="1.0" encoding="utf-8"?>
-                <!-- Generator: Adobe Illustrator 28.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                <svg  id="primas" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   viewBox="0 0 349.1 349.1" enable-background="new 0 0 349.1 349.1" xml:space="preserve">
-                <g id="fondo">
-                  <circle fill="#EFEFEF" cx="175.9" cy="170.8" r="132.2"/>
-                </g>
-                <g id="vida">
-                  <path id="_x31__00000172432428768024427170000018277408855775430049_" fill="#3B6DAC" d="M76.5,242.1
-                    c-39.3-54.1-27.3-129.9,26.8-169.3c20.7-15,45.6-23.1,71.2-23.2l0,53.9c-37.2,0-67.3,30.2-67.3,67.3c0,14.2,4.5,28.1,12.9,39.6
-                    L76.5,242.1z"/>
-                </g>
-                <g id="no-vida-txt">
-                  <text transform="matrix(1 0 0 1 240.1155 308.4603)"><tspan x="0" y="0" font-family="'Inter'" font-size="11px">Seguros de no vida</tspan><tspan x="14.6" y="22.1" font-family="'Inter'" font-size="18.4106px">65,89%</tspan></text>
-                </g>
-                <g id="no-vida">
-                  <path id="_x30_" fill="#E3BB96" d="M174.5,49.6c66.9,0,121.2,54.3,121.2,121.2S241.5,292,174.5,292c-38.8,0-75.2-18.6-98-49.9
-                    l43.6-31.7c21.9,30.1,64,36.7,94,14.9s36.7-64,14.9-94c-12.7-17.4-32.9-27.7-54.5-27.7V49.6z"/>
-                </g>
-                <g id="vida-txt">
-                  <text transform="matrix(1 0 0 1 11.7435 31.2662)"><tspan x="0" y="0" font-family="'Inter'" font-size="11px">Seguros de vida</tspan><tspan x="7" y="22.1" font-family="'Inter'" font-size="18.4106px">34,11%</tspan></text>
-                </g>
-                <g id="año">
-                  <text transform="matrix(1 0 0 1 134.9492 187.2431)" font-family="'Inter'" font-size="34.0355px">2022</text>
-                </g>
-                </svg>
+                <svg id="primas" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 349.1 349.1" style="enable-background:new 0 0 349.1 349.1;" xml:space="preserve">
+             <g id="fondo">
+               <circle style="fill:#EFEFEF;" cx="175.9" cy="170.8" r="132.2"/>
+             </g>
+             <g id="vida">
+               <path id="_x31__00000172432428768024427170000018277408855775430049_" style="fill:#3B6DAC;" d="M76.5,242.1
+                 c-39.3-54.1-27.3-129.9,26.8-169.3c20.7-15,45.6-23.1,71.2-23.2l0,53.9c-37.2,0-67.3,30.2-67.3,67.3c0,14.2,4.5,28.1,12.9,39.6
+                 L76.5,242.1z"/>
+             </g>
+             <g id="no-vida-txt">
+               <text transform="matrix(1 0 0 1 241.0178 31.2665)"><tspan x="0" y="0" style="font-family:'Inter'; font-size:11px;">Seguros de no vida</tspan><tspan x="14.6" y="22.1" style="font-family:'Inter'; font-weight:700; font-size:18.4106px;">65,89%</tspan></text>
+             </g>
+             <g id="no-vida">
+               <path id="_x30_" style="fill:#E3BB96;" d="M174.5,49.6c66.9,0,121.2,54.3,121.2,121.2S241.5,292,174.5,292
+                 c-38.8,0-75.2-18.6-98-49.9l43.6-31.7c21.9,30.1,64,36.7,94,14.9s36.7-64,14.9-94c-12.7-17.4-32.9-27.7-54.5-27.7V49.6z"/>
+             </g>
+             <g id="vida-txt">
+               <text transform="matrix(1 0 0 1 11.7435 31.2662)"><tspan x="0" y="0" style="font-family:'Inter'; font-size:11px;">Seguros de vida</tspan><tspan x="7" y="22.1" style="font-family:'Inter';font-weight:700; font-size:18.4106px;">34,11%</tspan></text>
+             </g>
+             <g id="año">
+               <text transform="matrix(1 0 0 1 134.9492 187.2431)" style="font-family:'Inter';font-weight:700; font-size:34.0355px;">2022</text>
+             </g>
+             </svg>
+             
               </div>
               <div class="VSlide mobile">
                 <!-- Generator: Adobe Illustrator 28.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -389,100 +411,101 @@
                 <h2 class="red">Evolución<br>de la cartera de negocios</h2>  
                 <div class="cartera-negocio-container">
                   <!-- Generator: Adobe Illustrator 28.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                  <svg id="cartera-negocio" class="grafica" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 0 349.1 340.2" enable-background="new 0 0 349.1 340.2" xml:space="preserve">
-                  <g id="G1-fondo">
-                    <circle fill="#EFEFEF" cx="226.7" cy="220.5" r="110.8"/>
-                  </g>
-                  <g id="G1-ano">
-                    <text transform="matrix(1 0 0 1 195.1132 230.7529)" font-family="'Inter'" font-size="27.1629px">2022</text>
-                  </g>
-                  <g id="G1-diversos">
-                    <g>
-                      <path id="_x34__00000069392379867797878010000016359135675400579766_" fill="#B69678" d="M160.7,143c18.4-15.7,41.8-24.3,66-24.3
-                        l0,56.6c-10.8,0-21.2,3.8-29.3,10.8L160.7,143z"/>
-                    </g>
-                  </g>
-                  <g id="G1-diversos-txt">
-                    <text transform="matrix(1 0 0 1 181.8945 140.9013)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="8.8082px">Diversos</tspan><tspan x="-3.3" y="14.4" fill="#FFFFFF" font-family="'Inter'" font-size="12px">11,48%</tspan></text>
-                  </g>
-                  <g id="G1-multirriesgos">
-                    <path id="_x33__00000017516686331371992630000005740211467092727703_" fill="#E3BB96" d="M124.9,223.8c-1-31,12.2-60.7,35.8-80.8
-                      l36.7,43.1c-10.5,8.9-16.3,22.2-15.9,35.9L124.9,223.8z"/>
-                  </g>
-                  <g id="G1-multirriesgos-txt">
-                    <text transform="matrix(1 0 0 1 137.4492 183.1816)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="8px">Multirriesgos</tspan><tspan x="2.9" y="14.4" fill="#FFFFFF" font-family="'Inter'" font-size="12px">14,54%</tspan></text>
-                  </g>
-                  <g id="G1-autos">
-                    <path id="_x32__00000060708656287256021400000005514581266792499864_" fill="#7F7F7F" d="M176.7,309.2
-                      c-31-17.5-50.7-49.9-51.8-85.5l56.5-1.8c0.5,15.8,9.2,30.2,23,38L176.7,309.2z"/>
-                  </g>
-                  <g id="G1-autos-txt">
-                    <text transform="matrix(1 0 0 1 150.6992 256.1025)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="8.8082px">Autos</tspan><tspan x="-8.8" y="14.4" fill="#FFFFFF" font-family="'Inter'" font-size="12px">16,73%</tspan></text>
-                  </g>
-                  <g id="G1-salud">
-                    <path id="_x31__00000087411785030419841000000006619797010251645600_" fill="#8499B4" d="M310.2,278.8c-30,43-87.8,56.2-133.5,30.5
-                      l27.8-49.3c20.3,11.4,46,5.6,59.3-13.5L310.2,278.8z"/>
-                  </g>
-                  <g id="G1-salud-txt">
-                    <text transform="matrix(1 0 0 1 228.499 289.7665)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="8.8082px">Salud</tspan><tspan x="-9.7" y="14.4" fill="#FFFFFF" font-family="'Inter'" font-size="12px">23,13%</tspan></text>
-                  </g>
-                  <g id="G1-vida">
-                    <path id="_x30__00000073689164095435432640000003277756216325270687_" fill="#3B6DAC" d="M226.7,118.6
-                      c56.2,0,101.8,45.6,101.8,101.8c0,20.8-6.4,41.2-18.3,58.3l-46.4-32.4c14.3-20.5,9.3-48.7-11.2-63c-7.6-5.3-16.6-8.1-25.9-8.1
-                      V118.6z"/>
-                  </g>
-                  <g id="G1-vida-txt">
-                    <text transform="matrix(1 0 0 1 280.9996 179.122)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="8.8082px">Vida</tspan><tspan x="-11.5" y="14.4" fill="#FFFFFF" font-family="'Inter'" font-size="12px">34,11%</tspan></text>
-                  </g>
-                  <g id="G2-fondo">
-                    <circle fill="#EFEFEF" cx="86" cy="88.1" r="75.6"/>
-                  </g>
-                  <g id="G2-ano">
-                    <text transform="matrix(1 0 0 1 63.3432 95.3598)" font-family="'Inter'" font-size="19.4749px">2021</text>
-                  </g>
-                  <g id="G2-vida">
-                    <path id="_x30__00000160186802107408771830000002677627708781921695_" fill="#3B6DAC" d="M86,17.5c39,0,70.6,31.6,70.6,70.6
-                      c0,15.9-5.4,31.3-15.2,43.7l-30.8-24.3c10.7-13.6,8.4-33.3-5.2-44c-5.5-4.4-12.4-6.8-19.4-6.8V17.5z"/>
-                  </g>
-                  <g id="G2-vida-txt">
-                    <text transform="matrix(1 0 0 1 127.9276 67.5434)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="6.0124px">Vida</tspan><tspan x="-7.6" y="9.6" fill="#FFFFFF" font-family="'Inter'" font-size="8px">35,67%</tspan></text>
-                  </g>
-                  <g id="G2-salud">
-                    <path id="_x31__00000014617707187046715000000004305565522172035751_" fill="#8499B4" d="M141.4,131.8
-                      c-20.8,26.3-57.2,34.3-87.1,19.3l17.6-35c13.3,6.7,29.5,3.1,38.7-8.6L141.4,131.8z"/>
-                  </g>
-                  <g id="G2-salud-txt">
-                    <text transform="matrix(1 0 0 1 89.1367 135.3725)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="6.0124px">Salud</tspan><tspan x="-6.3" y="9.6" fill="#FFFFFF" font-family="'Inter'" font-size="8px">22,45%</tspan></text>
-                  </g>
-                  <g id="G2-autos">
-                    <path id="_x32__00000041267738759982083560000017670469056979931551_" fill="#7F7F7F" d="M54.3,151.1
-                      c-22.7-11.5-37.6-34.3-38.7-59.7l39.2-1.8c0.5,11.3,7.1,21.4,17.2,26.5L54.3,151.1z"/>
-                  </g>
-                  <g id="G2-autos-txt">
-                    <text transform="matrix(1 0 0 1 38.1098 111.393)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="6.0124px">Autos</tspan><tspan x="-5.7" y="9.6" fill="#FFFFFF" font-family="'Inter" font-size="8px">16,79%</tspan></text>
-                  </g>
-                  <g id="G2-multirriesgos">
-                    <path id="_x33__00000161602680992028147580000010144275724958811793_" fill="#E3BB96" d="M15.5,91.4c-1-20.8,7.3-40.9,22.6-55.1
-                      l26.6,28.8c-6.8,6.3-10.5,15.2-10,24.5L15.5,91.4z"/>
-                  </g>
-                  <g id="G2-multirriesgos-txt">
-                    <text transform="matrix(1 0 0 1 22.3724 66.3671)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="5.4607px">Multirriesgos</tspan><tspan x="2.3" y="9.6" fill="#FFFFFF" font-family="'Inter'" font-size="8px">13,95%</tspan></text>
-                  </g>
-                  <g id="G2-diversos">
-                    <g>
-                      <path id="_x34__00000044871568847623526930000015613494350008746919_" fill="#B69678" d="M38.1,36.3c13-12.1,30.1-18.8,47.9-18.8
-                        l0,39.2c-7.9,0-15.5,3-21.3,8.3L38.1,36.3z"/>
-                    </g>
-                  </g>
-                  <g id="G2-diversos-txt">
-                    <text transform="matrix(1 0 0 1 55.9764 38.4726)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Inter'" font-size="6.0124px">Diversos</tspan><tspan x="-1.9" y="9.6" fill="#FFFFFF" font-family="'Inter'" font-size="8px">11,43%</tspan></text>
-                  </g>
-                  </svg>
-                  
-                </div>
 
+                  <svg id="cartera-negocio" class="graficaBig"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 445.6 238.9" style="enable-background:new 0 0 445.6 238.9;" xml:space="preserve">
+                <g id="G1-fondo">
+                  <circle style="fill:#EFEFEF;" cx="313.8" cy="117.5" r="110.8"/>
+                </g>
+                <g id="G1-ano">
+                  <text transform="matrix(1 0 0 1 282.1975 127.7516)" style="font-family:'Inter'; font-weight:700;font-size:27.1629px;">2022</text>
+                </g>
+                <g id="G1-diversos">
+                  <g>
+                    <path id="_x34__00000069392379867797878010000016359135675400579766_" style="fill:#B69678;" d="M247.8,40
+                      c18.4-15.7,41.8-24.3,66-24.3l0,56.6c-10.8,0-21.2,3.8-29.3,10.8L247.8,40z"/>
+                  </g>
+                </g>
+                <g id="G1-diversos-txt">
+                  <text transform="matrix(1 0 0 1 268.9788 37.9)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:8.8082px;">Diversos</tspan><tspan x="-3.3" y="14.4" style="fill:#FFFFFF; font-family:'Inter';font-weight:700; font-size:12px;">11,48%</tspan></text>
+                </g>
+                <g id="G1-multirriesgos">
+                  <path id="_x33__00000017516686331371992630000005740211467092727703_" style="fill:#E3BB96;" d="M212,120.8
+                    c-1-31,12.2-60.7,35.8-80.8L284.4,83c-10.5,8.9-16.3,22.2-15.9,35.9L212,120.8z"/>
+                </g>
+                <g id="G1-multirriesgos-txt">
+                  <text transform="matrix(1 0 0 1 224.5334 80.1803)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:8px;">Multirriesgos</tspan><tspan x="2.9" y="14.4" style="fill:#FFFFFF; font-family:'Inter';font-weight:700; font-size:12px;">14,54%</tspan></text>
+                </g>
+                <g id="G1-autos">
+                  <path id="_x32__00000060708656287256021400000005514581266792499864_" style="fill:#7F7F7F;" d="M263.8,206.2
+                    c-31-17.5-50.7-49.9-51.8-85.5l56.5-1.8c0.5,15.8,9.2,30.2,23,38L263.8,206.2z"/>
+                </g>
+                <g id="G1-autos-txt">
+                  <text transform="matrix(1 0 0 1 237.7834 153.1012)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:8.8082px;">Autos</tspan><tspan x="-8.8" y="14.4" style="fill:#FFFFFF; font-family:'Inter';font-weight:700; font-size:12px;">16,73%</tspan></text>
+                </g>
+                <g id="G1-salud">
+                  <path id="_x31__00000087411785030419841000000006619797010251645600_" style="fill:#8499B4;" d="M397.3,175.8
+                    c-30,43-87.8,56.2-133.5,30.5l27.8-49.3c20.3,11.4,46,5.6,59.3-13.5L397.3,175.8z"/>
+                </g>
+                <g id="G1-salud-txt">
+                  <text transform="matrix(1 0 0 1 315.5833 186.7652)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:8.8082px;">Salud</tspan><tspan x="-9.7" y="14.4" style="fill:#FFFFFF; font-family:'Inter';font-weight:700; font-size:12px;">23,13%</tspan></text>
+                </g>
+                <g id="G1-vida">
+                  <path id="_x30__00000073689164095435432640000003277756216325270687_" style="fill:#3B6DAC;" d="M313.8,15.6
+                    c56.2,0,101.8,45.6,101.8,101.8c0,20.8-6.4,41.2-18.3,58.3l-46.4-32.4c14.3-20.5,9.3-48.7-11.2-63c-7.6-5.3-16.6-8.1-25.9-8.1V15.6
+                    z"/>
+                </g>
+                <g id="G1-vida-txt">
+                  <text transform="matrix(1 0 0 1 368.0839 76.1207)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:8.8082px;">Vida</tspan><tspan x="-11.5" y="14.4" style="fill:#FFFFFF; font-family:'Inter';font-weight:700; font-size:12px;">34,11%</tspan></text>
+                </g>
+                <g id="G2-fondo">
+                  <circle style="fill:#EFEFEF;" cx="101.5" cy="117.5" r="86"/>
+                </g>
+                <g id="G2-ano">
+                  <text transform="matrix(1 0 0 1 75.767 125.7658)" style="font-family:'Inter';font-weight:700; font-size:22.1566px;">2021</text>
+                </g>
+                <g id="G2-vida">
+                  <path id="_x30__00000160186802107408771830000002677627708781921695_" style="fill:#3B6DAC;" d="M101.5,37.2
+                    c44.3,0,80.3,35.9,80.3,80.3c0,18.1-6.1,35.6-17.3,49.8l-35-27.6c12.2-15.5,9.6-37.9-5.9-50.1c-6.3-5-14.1-7.7-22.1-7.7V37.2z"/>
+                </g>
+                <g id="G2-vida-txt">
+                  <text transform="matrix(1 0 0 1 149.2441 94.1193)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:6.8403px;">Vida</tspan><tspan x="-8.6" y="10.9" style="fill:#FFFFFF; font-family:'Inter';font-weight:700; font-size:9.1016px;">35,67%</tspan></text>
+                </g>
+                <g id="G2-salud">
+                  <path id="_x31__00000014617707187046715000000004305565522172035751_" style="fill:#8499B4;" d="M164.5,167.3
+                    c-23.6,29.9-65,39.1-99.1,21.9l20.1-39.8c15.1,7.6,33.5,3.5,44-9.7L164.5,167.3z"/>
+                </g>
+                <g id="G2-salud-txt">
+                  <text transform="matrix(1 0 0 1 105.1123 171.2883)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:6.8403px;">Salud</tspan><tspan x="-7.2" y="10.9" style="fill:#FFFFFF; font-family:'Inter';font-weight:700;font-size:9.1016px;">22,45%</tspan></text>
+                </g>
+                <g id="G2-autos">
+                  <path id="_x32__00000041267738759982083560000017670469056979931551_" style="fill:#7F7F7F;" d="M65.4,189.2
+                    c-25.9-13-42.7-39-44.1-67.9l44.5-2.1c0.6,12.9,8.1,24.4,19.6,30.2L65.4,189.2z"/>
+                </g>
+                <g id="G2-autos-txt">
+                  <text transform="matrix(1 0 0 1 47.059 144.007)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:6.8403px;">Autos</tspan><tspan x="-6.5" y="10.9" style="fill:#FFFFFF; font-family:'Inter';font-weight:700; font-size:9.1016px;">16,79%</tspan></text>
+                </g>
+                <g id="G2-multirriesgos">
+                  <path id="_x33__00000161602680992028147580000010144275724958811793_" style="fill:#E3BB96;" d="M21.4,121.2
+                    C20.3,97.6,29.6,74.7,47,58.6l30.3,32.7c-7.7,7.1-11.9,17.3-11.4,27.9L21.4,121.2z"/>
+                </g>
+                <g id="G2-multirriesgos-txt">
+                  <text transform="matrix(1 0 0 1 29.1538 92.781)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:6.2127px;">Multirriesgos</tspan><tspan x="2.6" y="10.9" style="fill:#FFFFFF; font-family:'Inter';font-weight:700; font-size:9.1016px;">13,95%</tspan></text>
+                </g>
+                <g id="G2-diversos">
+                  <g>
+                    <path id="_x34__00000044871568847623526930000015613494350008746919_" style="fill:#B69678;" d="M47,58.6
+                      c14.8-13.7,34.3-21.4,54.5-21.4l0,44.6c-9,0-17.6,3.4-24.2,9.5L47,58.6z"/>
+                  </g>
+                </g>
+                <g id="G2-diversos-txt">
+                  <text transform="matrix(1 0 0 1 67.3857 61.0456)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'Inter'; font-size:6.8403px;">Diversos</tspan><tspan x="-2.2" y="10.9" style="fill:#FFFFFF; font-family:'Inter';font-weight:700; font-size:9.1016px;">11,43%</tspan></text>
+                </g>
+                </svg>
+
+                </div>
               </div>
+              
               <div class="VSlide mobile">
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 28.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -617,7 +640,7 @@
               <div class="VSlide">
                 <h2 class="red">En 2022 ofrecimos servicio <br>a <span class="animCounterNoDecimals">601096</span> clientes</h2>
                 <h2 class="cardsContainerHeading">
-                  Servicios de Asistencia<br> e Indeminaciones
+                  Servicios de asistencia<br> e indeminaciones
                 </h2>
                 <div class="cardsContainer cardsContainerH">
                     <div class="iconCardContainer">
@@ -744,7 +767,7 @@
               </div>
               <div class="VSlide"> 
                 <h2 class="cardsContainerHeading">
-                  Servicios Atendidos<br> en Seguros de Salud
+                  Servicios atendidos<br> en seguros de salud
                 </h2>
             
                   <div class="cardsContainer cardsContainerH">
@@ -909,7 +932,7 @@
                         <div class="barra barra-exterior"></div>
                       </div>  
                       <h4><span class="animCounter">94.82</span>%</h4>
-                      <p class="smallText">de nuestros trabajadores se encuentra en situación de <strong>contrato indefinido</strong></p>
+                      <p>de nuestros trabajadores se encuentra en situación de <strong>contrato indefinido</strong></p>
                     </div>
                     <div class="card">
                       <div class="grafica-barras plantilla">
@@ -917,7 +940,7 @@
                         <div class="barra barra-exterior"></div>
                       </div>  
                       <h4><span class="animCounter">11.68</span>%</h4>
-                      <p class="smallText">de nuestra plantilla realiza funciones <strong>comerciales</strong></p>
+                      <p>de nuestra plantilla realiza funciones <strong>comerciales</strong></p>
                     </div>
                   </div>
                   <div class="cardsContainer cardsContainerH">
@@ -927,11 +950,11 @@
                         <div class="barra barra-exterior"></div>
                       </div>  
                       <h4><span class="animCounter">88.32</span>%</h4>
-                      <p class="smallText">lleva a cabo una labor <strong>administrativa</strong></p>
+                      <p >lleva a cabo una labor <strong>administrativa</strong></p>
                     </div>
                     <div class="card">
                       <h4><span class="animCounterNoDecimals">15589</span></h4>
-                      <p class="smallText"><strong>horas de formación online y presencial</strong> en toda España sobre información técnica de productos y habilidades interpersonales</p>
+                      <p><strong>horas de formación online y presencial</strong> en toda España sobre información técnica de productos y habilidades interpersonales</p>
                     </div>
                   </div>
                 </div>
@@ -945,7 +968,7 @@
                             <img width="100" src="img/iconos-manos.png"/>
                           </div>
                           <h4><span class="animCounterNoDecimals">5484</span></h4>
-                          <p class="smallText">Mediadores en 2022</p>
+                          <p>Mediadores en 2022</p>
                         </div>
                       </div>
                       <div class="iconCardContainer">
@@ -954,7 +977,7 @@
                             <img width="100" src="img/iconos-agencia.png"/>
                           </div>
                           <h4><span class="animCounterNoDecimals">167</span></h4>
-                          <p class="smallText">agencias abiertas con el apoyo de FIATC</p>
+                          <p>agencias abiertas con el apoyo de FIATC</p>
                         </div>
                       </div>
                       <div class="iconCardContainer">
@@ -963,7 +986,7 @@
                             <img width="100" src="img/iconos-formacion.png"/>
                           </div>
                           <h4><span class="animCounterNoDecimals">11003</span> horas</h4>
-                          <p class="smallText">Formación online y presencial a mediadores FIATC</p>
+                          <p>Formación online y presencial a mediadores FIATC</p>
                         </div>
                       </div>
                   </div>
@@ -1008,7 +1031,14 @@
                 <div class="VSlide">
                   <h2 class="red">Medio Ambiente</h2>
                   <p class="bigText">Nuestro impacto ambiental positivo por recuperación de residuos de papel y cartón crece cada año en cuanto a toneladas recuperadas, árboles no talados, ahorro de agua, de energía y emisión de CO2 evitada.</p>
-                  <dotlottie-player src="animations/green-enviroment.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+                  <lottie-player
+                    autoplay
+                    loop
+                    mode="normal"
+                    src="/animations/green-enviroment.json"
+                    style="width: 320px"
+                  >
+                  </lottie-player>
                 </div>
               </div>
             </div>
@@ -1036,7 +1066,7 @@
         </div>
       </div><!--end secciones-->  
   </div>
-  <script src="js/app.js"></script>
+  <script src="js/app.js" type="module"></script>
 
 </body>
 
