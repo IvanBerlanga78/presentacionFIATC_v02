@@ -229,7 +229,9 @@ footer .menu a, footer .menu .derechos{
   justify-content: center;
   width: 100%;
 }
-
+.mt2 {
+  margin-top: 2rem;
+}
 .Vpanel{
   display: flex;
 }
@@ -263,8 +265,6 @@ footer .menu a, footer .menu .derechos{
 
 .Hpanel {
   background-size: cover;
-  color: #fff;
-  background-color: #fff;
 }
 .Hpanel {
  padding: 5rem;
@@ -278,6 +278,8 @@ footer .menu a, footer .menu .derechos{
   left: 2px;
   position: relative;
  }
+
+
 .seccion1 .tituloSeccion {
   background-image: url("../img/paisaje-1-1.jpg");
 }
@@ -482,9 +484,9 @@ svg {
   width: 100%;
 }
 .container-text p {
-  font-size: 18px;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  line-height: 26px;
+  line-height: 1.8rem;
 }
 .cardsContainer {
   display: flex;
@@ -598,7 +600,7 @@ svg {
   font-weight: 700;
 }
 .parrafo-destacado {
-  max-width: 500px;
+  max-width: 800px;
     text-align: left;
     padding-left: 1.7rem;
     border-left: 5px solid var(--main-blue-color);
@@ -614,14 +616,19 @@ svg {
   width: 100%;
   flex-wrap: wrap;
 }
+
+.logosContainer .img-container{
+  height: 200px;
+}
 .logosContainer li {
   width: 33%;
   flex-direction: column;
   display: flex;
   align-content: center;
   flex-wrap: wrap;
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   line-height: 1.8rem;
+  margin-bottom: 3rem;
 }
 
 .logosContainer img { 
@@ -661,8 +668,16 @@ svg {
   color: #000;
 }
 .seccion5 .containerLinks {
-  background-color: #aed9ff;
+  background-color: #ffffff;
   padding: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.seccion5 .containerLinks svg {
+  width: 30px;
 }
 .seccion5 .containerLinks img {
   padding-bottom: 0.6rem;
@@ -675,6 +690,9 @@ svg {
   color: #000;
   text-decoration: none;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .seccion5 ul ul {
   padding-left: 1rem;
@@ -705,6 +723,9 @@ svg {
 @media (min-width:1100px) {
   .mobile {
     display: none;
+  }
+  .iconCardContainer {
+    width: 33%;
   }
 }
 @media  (max-width:1100px) {
@@ -794,7 +815,7 @@ svg {
   }
   .VSlide h2 {
     font-size: 2.4rem;
-}
+  }
   h2 {
     font-size:3rem;
   }
@@ -888,6 +909,7 @@ svg {
   .card, .iconCardContainer {
     min-width: 100%;
   }
+
 }
 
 

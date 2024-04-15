@@ -365,57 +365,50 @@ gsap.timeline({repeat: -1, repeatDelay: 1})
 
 const containerTexts = gsap.utils.toArray(".container-text")
 
-
-
 containerTexts.forEach(containerText => {
 
   const titulo = containerText.querySelector("h3");
   const imagen = containerText.querySelector("img");
   const parrafos = containerText.querySelectorAll("p");
 
-  gsap.set(titulo, { opacity: 0, transformOrigin: "50% 50%" });
-  gsap.set(imagen, { opacity: 0, transformOrigin: "50% 50%" });
-  gsap.set(parrafos, { opacity: 0, transformOrigin: "50% 50%" });
+  gsap.set(titulo, { opacity: 0, transformOrigin: "0% 50%" });
+  gsap.set(imagen, { opacity: 0, transformOrigin: "0% 50%" });
+  gsap.set(parrafos, { opacity: 0, transformOrigin: "0% 50%" });
 
   gsap.timeline()  
  .to(titulo, {
     opacity: 1,
     ease: "none",
-    duration:3,
     scrollTrigger: {
       trigger: containerText,
-      start: "0% 60%",
-      end: "90% 70%",
+      start: "10% 70%",
+      end: "90% 80%",
       scrub: 1
     }
   })
-
-  .to(imagen, {
-    opacity: 1,
-    ease: "none",
-    duration:2,
-    scrollTrigger: {
-      trigger: containerText,
-      start: "60% 70%",
-      end: "90% 70%",
-      scrub: 1
-    }
-  })
-
   
-    gsap.to(parrafos, {
+   .to(parrafos, {
       opacity: 1,
       y:5,
       ease: "none",
-      duration:1,
-      stagger:0.5,
+      stagger:3,
       scrollTrigger: {
         trigger: containerText,
-        start: "50% 60%",
-        end: "90% 70%",
+        start: "50% 70%",
+        end: "90% 80%",
         scrub: 1
       }
 
+  })
+  .to(imagen, {
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: containerText,
+      start: "70% 70%",
+      end: "90% 80%",
+      scrub: 1
+    }
   })
 })
 
