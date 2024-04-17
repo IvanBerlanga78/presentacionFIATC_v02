@@ -95,8 +95,7 @@ const graph1Ani = gsap.timeline({paused:true})
   ScrollTrigger.create({
     trigger:".cartera-negocio-container",
     animation:graph1Ani,
-    pin:true,
-    scrub:3,
+    scrub:1,
     start:"30% 40%",
     end:"100% 50%",
   })
@@ -154,9 +153,6 @@ const graph1Ani = gsap.timeline({paused:true})
   });
  
 });
-
-
-
 
 
   function formatNumber(value, decimals) {
@@ -289,80 +285,8 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
             }
         }); })
 
-}) //End responsive >1100
 
-mm.add("(max-width: 1100px)", () => {
-
-  gsap.utils.toArray(".animCounter").forEach(box => {
-    var tler =  gsap.from(box, {
-        textContent: "0",
-        duration: 2,
-        ease: "power1.inOut",
-        modifiers: {
-            textContent: value => formatNumber(value, 2)
-        },
-        scrollTrigger: {
-            trigger: box,
-            start: "30% 50%",
-            end: "bottom 60%",
-            toggleActions: "play none none reverse"
-        }
-    }); })
-  
-    gsap.utils.toArray(".animCounterNoDecimals").forEach(box => {
-      var tler =  gsap.from(box, {
-          textContent: "0",
-          duration: 2,
-          ease: "power1.inOut",
-          modifiers: {
-              textContent: value => formatNumber(value, 0)
-          },
-          scrollTrigger: {
-              trigger: box,
-              start: "30% 50%",
-              end: "bottom 60%",
-              toggleActions: "play none none reverse"
-          }
-      }); })
-
-})//End responsive <1100
-
-  const mobileButtons = document.querySelectorAll(".mobile-menu .btn") 
-  const click= document.querySelector('.lineas');
-
-  click.addEventListener('click', function(){
-    click.classList.toggle('lineas-plegado');
-    document.querySelector(".mobile-menu").classList.toggle('on')
-    })
-  mobileButtons.forEach(button=> {
-    button.addEventListener("click", function() {
-      click.classList.toggle('lineas-plegado');
-      document.querySelector(".mobile-menu").classList.toggle('on')
-    })
-  })
-
-  const graficaBarra1BarraExterior = document.querySelector(".grafica-barras.contrato-indefinido .barra-exterior");
-  const graficaBarra1BarraInterior = document.querySelector(".grafica-barras.contrato-indefinido .barra-interior");
-  gsap.timeline({repeat: -1, repeatDelay: 1})
-.to(graficaBarra1BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
-.to(graficaBarra1BarraInterior,{yPercent:-90 ,transformOrigin:"bottom bottom",duration:2})
-
-
-const graficaBarra2BarraExterior = document.querySelector(".grafica-barras.plantilla .barra-exterior");
-const graficaBarra2BarraInterior = document.querySelector(".grafica-barras.plantilla .barra-interior");
-gsap.timeline({repeat: -1, repeatDelay: 1})
-.to(graficaBarra2BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
-.to(graficaBarra2BarraInterior,{yPercent:-11 ,transformOrigin:"bottom bottom",duration:2})
-
-
-const graficaBarra3BarraExterior = document.querySelector(".grafica-barras.labor .barra-exterior");
-const graficaBarra3BarraInterior = document.querySelector(".grafica-barras.labor .barra-interior");
-gsap.timeline({repeat: -1, repeatDelay: 1})
-.to(graficaBarra3BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
-.to(graficaBarra3BarraInterior,{yPercent:-80 ,transformOrigin:"bottom bottom",duration:2})
-
-
-
+   
 const containerTexts = gsap.utils.toArray(".container-text")
 
 containerTexts.forEach(containerText => {
@@ -410,7 +334,134 @@ containerTexts.forEach(containerText => {
       scrub: 1
     }
   })
+})     
+
+
+}) //End responsive >1100
+
+mm.add("(max-width: 1100px)", () => {
+
+  gsap.utils.toArray(".animCounter").forEach(box => {
+    var tler =  gsap.from(box, {
+        textContent: "0",
+        duration: 2,
+        ease: "power1.inOut",
+        modifiers: {
+            textContent: value => formatNumber(value, 2)
+        },
+        scrollTrigger: {
+            trigger: box,
+            start: "30% 80%",
+            end: "bottom 100%",
+            toggleActions: "play none none none"
+        }
+    }); })
+  
+    gsap.utils.toArray(".animCounterNoDecimals").forEach(box => {
+      var tler =  gsap.from(box, {
+          textContent: "0",
+          duration: 2,
+          ease: "power1.inOut",
+          modifiers: {
+              textContent: value => formatNumber(value, 0)
+          },
+          scrollTrigger: {
+              trigger: box,
+              start: "30% 80%",
+              end: "bottom 100%",
+              toggleActions: "play none none none"
+          }
+      }); })
+
+
+const containerTexts = gsap.utils.toArray(".container-text")
+
+containerTexts.forEach(containerText => {
+
+  const titulo = containerText.querySelector("h3");
+  const imagen = containerText.querySelector("img");
+  const parrafos = containerText.querySelectorAll("p");
+
+  gsap.set(titulo, { opacity: 0, transformOrigin: "0% 50%" });
+  gsap.set(imagen, { opacity: 0, transformOrigin: "0% 50%" });
+  gsap.set(parrafos, { opacity: 0, transformOrigin: "0% 50%" });
+
+  gsap.timeline()
+  .to(imagen, {
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: containerText,
+      start: "0% 50%",
+      end: "90% 80%",
+      scrub: 1
+    }
+  })  
+ .to(titulo, {
+    opacity: 1,
+    ease: "none",
+    scrollTrigger: {
+      trigger: containerText,
+      start: "0% 50%",
+      end: "90% 80%",
+      scrub: 1
+    }
+  })
+  
+   .to(parrafos, {
+      opacity: 1,
+      y:5,
+      ease: "none",
+      stagger:3,
+      scrollTrigger: {
+        trigger: containerText,
+        start: "50% 70%",
+        end: "90% 80%",
+        scrub: 1
+      }
+
+  })
+  
 })
+
+
+})//End responsive <1100
+
+  const mobileButtons = document.querySelectorAll(".mobile-menu .btn") 
+  const click= document.querySelector('.lineas');
+
+  click.addEventListener('click', function(){
+    click.classList.toggle('lineas-plegado');
+    document.querySelector(".mobile-menu").classList.toggle('on')
+    })
+  mobileButtons.forEach(button=> {
+    button.addEventListener("click", function() {
+      click.classList.toggle('lineas-plegado');
+      document.querySelector(".mobile-menu").classList.toggle('on')
+    })
+  })
+
+  const graficaBarra1BarraExterior = document.querySelector(".grafica-barras.contrato-indefinido .barra-exterior");
+  const graficaBarra1BarraInterior = document.querySelector(".grafica-barras.contrato-indefinido .barra-interior");
+  gsap.timeline({repeat: -1, repeatDelay: 1})
+//.to(graficaBarra1BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
+.to(graficaBarra1BarraInterior,{yPercent:-90 ,transformOrigin:"bottom bottom",duration:2})
+
+
+const graficaBarra2BarraExterior = document.querySelector(".grafica-barras.plantilla .barra-exterior");
+const graficaBarra2BarraInterior = document.querySelector(".grafica-barras.plantilla .barra-interior");
+gsap.timeline({repeat: -1, repeatDelay: 1})
+//.to(graficaBarra2BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
+.to(graficaBarra2BarraInterior,{yPercent:-11 ,transformOrigin:"bottom bottom",duration:2})
+
+
+const graficaBarra3BarraExterior = document.querySelector(".grafica-barras.labor .barra-exterior");
+const graficaBarra3BarraInterior = document.querySelector(".grafica-barras.labor .barra-interior");
+gsap.timeline({repeat: -1, repeatDelay: 1})
+//.to(graficaBarra3BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
+.to(graficaBarra3BarraInterior,{yPercent:-80 ,transformOrigin:"bottom bottom",duration:2})
+
+
 
 const card = document.querySelector(".portada .content");
 const motionMatchMedia = window.matchMedia("(prefers-reduced-motion)");

@@ -275,10 +275,8 @@ footer .menu a, footer .menu .derechos{
   max-width: 50rem;
  }
  .tituloSeccion {
-  left: 2px;
   position: relative;
  }
-
 
 .seccion1 .tituloSeccion {
   background-image: url("../img/paisaje-1-1.jpg");
@@ -387,6 +385,7 @@ footer .menu a, footer .menu .derechos{
 }
 .animNumber {
   display: block;
+  margin-top: 1.2rem;
 }
 .nav p {
   margin-bottom: 0;
@@ -442,9 +441,7 @@ svg {
 .VSlide:first-of-type h2:first-of-type {
   margin-top: 15rem;
  }
- .VSlide:last-of-type {
-  margin-bottom: 15rem;
- } 
+
 .VSlide{
   color: #222;
 }
@@ -563,7 +560,7 @@ svg {
 
 .bigText {
   font-size: 1.5rem;
-  line-height: 1.4em;
+  line-height: 1.6rem;
 }
 .withIcon {
   padding-left: 5rem;
@@ -626,8 +623,8 @@ svg {
   display: flex;
   align-content: center;
   flex-wrap: wrap;
-  font-size: 0.9rem;
-  line-height: 1.8rem;
+  font-size: 1.5rem;
+  line-height: 1.6em;
   margin-bottom: 3rem;
 }
 
@@ -650,10 +647,10 @@ svg {
   width: 100%;
   height: 100%;
   position: absolute;
-  bottom: -100%;
+  bottom: 0;
 }
 .grafica-barras .barra-exterior { 
-  background-color: #17375e;
+  background-color: rgba(23, 55, 94,0.30);
 }
 .grafica-barras .barra-interior { 
   background-color:var(--main-blue-color);
@@ -672,7 +669,7 @@ svg {
   padding: 2.3rem;
   display: flex;
   flex-direction: column;
-  row-gap: 3rem;
+  row-gap: 1.5rem;
   justify-content: center;
   align-items: center;
 }
@@ -727,6 +724,13 @@ svg {
   .iconCardContainer {
     width: 33%;
   }
+  
+  .VSlide:last-of-type {
+    padding-bottom: 15rem;
+   }
+   .tituloSeccion {
+    left: 2px;
+   }
 }
 @media  (max-width:1100px) {
   .desktop {
@@ -821,7 +825,6 @@ svg {
   }
   .bigText {
     font-size: 1.5rem;
-    line-height: 1em;
   }
   .portadaSeccion {
     display: none;
@@ -906,10 +909,20 @@ svg {
   .container-text .col-50 {
     width: 100%;
   }
-  .card, .iconCardContainer {
-    min-width: 100%;
+  .card {
+    row-gap: 0.5rem;
   }
-
+  .card, .iconCardContainer {
+    width: 100%;
+    padding: 2rem;
+  }
+  .VSlide:first-of-type h2:first-of-type {
+    margin-top: 6rem;
+  }
+  .cardsContainer, .cardsContainerH { 
+    margin-top: 0;
+    column-gap: 0;
+  }
 }
 
 
