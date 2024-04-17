@@ -650,10 +650,10 @@ svg {
   bottom: 0;
 }
 .grafica-barras .barra-exterior { 
-  background-color: rgba(23, 55, 94,0.30);
+  background-color:var(--main-blue-color);
 }
 .grafica-barras .barra-interior { 
-  background-color:var(--main-blue-color);
+  background-color: #acadaf;
   z-index: 2;
 }
 .seccion5 {
