@@ -96,8 +96,8 @@ const graph1Ani = gsap.timeline({paused:true})
     trigger:".cartera-negocio-container",
     animation:graph1Ani,
     scrub:1,
-    start:"30% 40%",
-    end:"100% 50%",
+    start:"40% 60%",
+    end:"60% 50%"
   })
 
   const graficaPrimasFondo = document.querySelector("#primas #fondo");
@@ -445,21 +445,36 @@ containerTexts.forEach(containerText => {
   const graficaBarra1BarraInterior = document.querySelector(".grafica-barras.contrato-indefinido .barra-interior");
   gsap.timeline({repeat: -1, repeatDelay: 1})
 //.to(graficaBarra1BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
-.to(graficaBarra1BarraInterior,{yPercent:-90 ,transformOrigin:"bottom bottom",duration:2})
+.to(graficaBarra1BarraInterior,{yPercent:-95 ,transformOrigin:"bottom bottom",duration:2})
 
 
 const graficaBarra2BarraExterior = document.querySelector(".grafica-barras.plantilla .barra-exterior");
 const graficaBarra2BarraInterior = document.querySelector(".grafica-barras.plantilla .barra-interior");
 gsap.timeline({repeat: -1, repeatDelay: 1})
 //.to(graficaBarra2BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
-.to(graficaBarra2BarraInterior,{yPercent:-11 ,transformOrigin:"bottom bottom",duration:2})
+.to(graficaBarra2BarraInterior,{yPercent:-35 ,transformOrigin:"bottom bottom",duration:2})
 
 
 const graficaBarra3BarraExterior = document.querySelector(".grafica-barras.labor .barra-exterior");
 const graficaBarra3BarraInterior = document.querySelector(".grafica-barras.labor .barra-interior");
 gsap.timeline({repeat: -1, repeatDelay: 1})
 //.to(graficaBarra3BarraExterior,{yPercent:-100, transformOrigin:"bottom bottom", duration:1})
-.to(graficaBarra3BarraInterior,{yPercent:-80 ,transformOrigin:"bottom bottom",duration:2})
+.to(graficaBarra3BarraInterior,{yPercent:-65 ,transformOrigin:"bottom bottom",duration:2})
+
+
+const Separators = document.querySelectorAll(".separator")
+
+Separators.forEach(Separator=>{
+  gsap.timeline({repeat: -1, repeatDelay: 1, yoyo:true})
+  //.to(Separator,{backgroundColor:"#3b6dac" ,transformOrigin:"bottom bottom",duration:3})
+
+  const animItem = Separator.querySelector(".animitem");
+
+  gsap.timeline({repeat: -1,  yoyo:true})
+  .to(animItem, {width:800,transformOrigin:"center", duration:6})
+})
+
+
 
 
 

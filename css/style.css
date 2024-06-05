@@ -703,7 +703,21 @@ svg {
 .bgRed {
   background-color: var(--main-red);
 }
-
+.separator {
+  background-color: aliceblue;
+  width: 60%;
+  height: 0.4rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.separator .animitem {
+  width: 30px;
+  display: block;
+  background: var(--main-blue-color);
+  height: 1rem;
+}
 @media (max-width:1100px) {
   footer {
     flex-direction: column;
@@ -922,6 +936,9 @@ svg {
   .cardsContainer, .cardsContainerH { 
     margin-top: 0;
     column-gap: 0;
+  }
+  .seccion1 .mobile .grafica {
+    width: 300px;
   }
 }
 
