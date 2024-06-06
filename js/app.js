@@ -30,7 +30,7 @@ btnArchivo.addEventListener("click", function(event){
   document.querySelector(".btnSecundario2023").classList.toggle('active');
 })
 
-const titulosSeccion = document.querySelectorAll(".tituloSeccion .btnPrincipal")
+const titulosSeccion = document.querySelectorAll(".tituloSeccion")
 
 // Animación Títulos de sección
 titulosSeccion.forEach((tituloSeccion, index) => {
@@ -40,7 +40,7 @@ titulosSeccion.forEach((tituloSeccion, index) => {
 
 const animation = gsap.from(titulo, {
   opacity: 0,
-  duration:1
+  duration:1.5
 })
 ScrollTrigger.create({
   trigger:titulo,
@@ -211,7 +211,7 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
       toggleActions: "play none none reverse",
   }})
 
-  HScrollContainer.forEach((HScrollContainerItem) => {
+/*  HScrollContainer.forEach((HScrollContainerItem) => {
     gsap.to(HScrollContainerItem, {
       xPercent: -50,
       ease: "none",
@@ -225,7 +225,7 @@ let HScrollContainer = gsap.utils.toArray(".HScrollContainer");
       }
     })
   });
-
+*/
   VScrollContainer.forEach((VScrollContainerItem, index) => {
     let sidebar=document.querySelectorAll(".VpanelIzquierda");
     
